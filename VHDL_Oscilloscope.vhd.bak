@@ -1,0 +1,17 @@
+
+
+component ctrl_spi_tx is
+port(
+	CLK, RST_N : in std_logic;
+	MODE : in std_logic_vector(1 downto 0);
+	tx : out std_logic; 
+   SPI_SCK   : out std_logic;
+   SPI_MOSI : out std_logic;
+   SPI_MISO  : in  std_logic;
+	--SHOW : out std_logic_vector(7 downto 0);
+	
+   SPI_SS_N  : out std_logic );
+end component;
+
+		CtrlSpiTx:ctrl_spi_tx
+			port map(CLK, RST_N, mode_data, tx, SPI_SCK, SPI_MOSI, SPI_MISO,SPI_SS_N);

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Oscilloscope">
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_v0p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_7jm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_jvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_jvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_jvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_gfh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

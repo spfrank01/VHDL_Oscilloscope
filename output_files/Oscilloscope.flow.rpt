@@ -1,0 +1,117 @@
+Flow report for Oscilloscope
+Mon May 08 21:23:17 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Mon May 08 21:23:16 2017      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; Oscilloscope                               ;
+; Top-level Entity Name              ; VHDL_Oscilloscope                          ;
+; Family                             ; Cyclone III                                ;
+; Device                             ; EP3C10E144C8                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 2,134                                      ;
+;     Total combinational functions  ; 2,107                                      ;
+;     Dedicated logic registers      ; 292                                        ;
+; Total registers                    ; 292                                        ;
+; Total pins                         ; 15                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/08/2017 21:22:56 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Oscilloscope        ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------+---------------+-------------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name       ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 272897457442924.149425337601800 ; --            ; --                ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --                ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --                ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --                ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --                ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --                ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; VHDL_Oscilloscope ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; VHDL_Oscilloscope ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; VHDL_Oscilloscope ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --                ; --             ;
+; TOP_LEVEL_ENTITY                    ; VHDL_Oscilloscope               ; Oscilloscope  ; --                ; --             ;
++-------------------------------------+---------------------------------+---------------+-------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 677 MB              ; 00:00:17                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:17                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-HLNJ7DK  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Oscilloscope -c Oscilloscope
+
+
+

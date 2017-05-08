@@ -1,0 +1,75 @@
+
+State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|state
+Name state.WAIT_SEND_VOLTAGE_CH2_PART2_DUAL state.SEND_VOLTAGE_CH2_PART2_DUAL state.WAIT_SEND_VOLTAGE_CH2_PART1_DUAL state.SEND_VOLTAGE_CH2_PART1_DUAL state.WAIT_SEND_VOLTAGE_CH1_PART2_DUAL state.SEND_VOLTAGE_CH1_PART2_DUAL state.WAIT_SEND_VOLTAGE_CH1_PART1_DUAL state.SEND_VOLTAGE_CH1_PART1_DUAL state.WAIT_SEND_MODE_DUAL state.SEND_MODE_DUAL state.WAIT_DONE_CH2_DUAL state.REQ_VOLTAGE_CH2_DUAL state.WAIT_DONE_CH1_DUAL state.REQ_VOLTAGE_CH1_DUAL state.WAIT_SEND_VOLTAGE_PART2_SINGLE state.SEND_VOLTAGE_PART2_SINGLE state.WAIT_SEND_VOLTAGE_PART1_SINGLE state.SEND_VOLTAGE_PART1_SINGLE state.WAIT_SEND_MODE_SINGLE state.SEND_MODE_SINGLE state.WAIT_DONE_SINGLE state.REQ_VOLTAGE_SINGLE state.MODE_OFF state.WAIT_TIME_REQ 
+state.WAIT_TIME_REQ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.MODE_OFF 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.REQ_VOLTAGE_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.WAIT_DONE_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.SEND_MODE_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.WAIT_SEND_MODE_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.SEND_VOLTAGE_PART1_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.WAIT_SEND_VOLTAGE_PART1_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.SEND_VOLTAGE_PART2_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.WAIT_SEND_VOLTAGE_PART2_SINGLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.REQ_VOLTAGE_CH1_DUAL 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_DONE_CH1_DUAL 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.REQ_VOLTAGE_CH2_DUAL 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_DONE_CH2_DUAL 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SEND_MODE_DUAL 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_SEND_MODE_DUAL 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SEND_VOLTAGE_CH1_PART1_DUAL 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_SEND_VOLTAGE_CH1_PART1_DUAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SEND_VOLTAGE_CH1_PART2_DUAL 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_SEND_VOLTAGE_CH1_PART2_DUAL 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SEND_VOLTAGE_CH2_PART1_DUAL 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_SEND_VOLTAGE_CH2_PART1_DUAL 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SEND_VOLTAGE_CH2_PART2_DUAL 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_SEND_VOLTAGE_CH2_PART2_DUAL 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state
+Name state.SEND_STOP_BIT state.SEND_BITS state.SEND_START_BIT state.WAIT_FOR_REQ 
+state.WAIT_FOR_REQ 0 0 0 0 
+state.SEND_START_BIT 0 0 1 1 
+state.SEND_BITS 0 1 0 1 
+state.SEND_STOP_BIT 1 0 0 1 
+
+State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state
+Name state.S8 state.S7 state.S6 state.S5 state.S4 state.S3 state.S2 state.S1 state.S0 
+state.S0 0 0 0 0 0 0 0 0 0 
+state.S1 0 0 0 0 0 0 0 1 1 
+state.S2 0 0 0 0 0 0 1 0 1 
+state.S3 0 0 0 0 0 1 0 0 1 
+state.S4 0 0 0 0 1 0 0 0 1 
+state.S5 0 0 0 1 0 0 0 0 1 
+state.S6 0 0 1 0 0 0 0 0 1 
+state.S7 0 1 0 0 0 0 0 0 1 
+state.S8 1 0 0 0 0 0 0 0 1 
+
+State Machine - |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|state
+Name state.wait_for_stop_bit state.receive_bits state.wait_half_bit state.wait_for_rx_start 
+state.wait_for_rx_start 0 0 0 0 
+state.wait_half_bit 0 0 1 1 
+state.receive_bits 0 1 0 1 
+state.wait_for_stop_bit 1 0 0 1 
+
+State Machine - |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state
+Name op_state.DONE op_state.WAIT_DELAY_L op_state.WAIT_HOLD_L op_state.ENABLE_L op_state.WAIT_SETUP_L op_state.WAIT_DELAY_H op_state.WAIT_HOLD_H op_state.ENABLE_H op_state.WAIT_SETUP_H op_state.IDLE 
+op_state.IDLE 0 0 0 0 0 0 0 0 0 0 
+op_state.WAIT_SETUP_H 0 0 0 0 0 0 0 0 1 1 
+op_state.ENABLE_H 0 0 0 0 0 0 0 1 0 1 
+op_state.WAIT_HOLD_H 0 0 0 0 0 0 1 0 0 1 
+op_state.WAIT_DELAY_H 0 0 0 0 0 1 0 0 0 1 
+op_state.WAIT_SETUP_L 0 0 0 0 1 0 0 0 0 1 
+op_state.ENABLE_L 0 0 0 1 0 0 0 0 0 1 
+op_state.WAIT_HOLD_L 0 0 1 0 0 0 0 0 0 1 
+op_state.WAIT_DELAY_L 0 1 0 0 0 0 0 0 0 1 
+op_state.DONE 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|state
+Name state.WRITE_LINE2 state.SELECT_LINE2 state.WRITE_LINE1 state.SELECT_LINE1 state.CONFIG state.RESET 
+state.RESET 0 0 0 0 0 0 
+state.CONFIG 0 0 0 0 1 1 
+state.SELECT_LINE1 0 0 0 1 0 1 
+state.WRITE_LINE1 0 0 1 0 0 1 
+state.SELECT_LINE2 0 1 0 0 0 1 
+state.WRITE_LINE2 1 0 0 0 0 1 
