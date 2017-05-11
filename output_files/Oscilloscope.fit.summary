@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu May 11 18:18:19 2017
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : Oscilloscope
+Top-level Entity Name : VHDL_Oscilloscope
+Family : Cyclone III
+Device : EP3C10E144C8
+Timing Models : Final
+Total logic elements : 2,469 / 10,320 ( 24 % )
+    Total combinational functions : 2,451 / 10,320 ( 24 % )
+    Dedicated logic registers : 332 / 10,320 ( 3 % )
+Total registers : 332
+Total pins : 15 / 95 ( 16 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

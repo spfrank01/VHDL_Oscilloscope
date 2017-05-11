@@ -24,7 +24,8 @@ end controller_Spi_tx;
 
 
 architecture behave of controller_Spi_tx is
-constant MAX_COUNTER: integer := 2500000;
+--constant TIME_PER_SEC : integer := 50;
+constant MAX_COUNTER: integer := 1000000;
 constant VOLTAGE_REFER : integer := 3300;
    type state_type is (
         WAIT_TIME_REQ,
@@ -93,11 +94,11 @@ process(CLK) begin
 					--mode_buffer <= MODE;
 					count_time <= 0;
 					--check <= "00000010";
-					if mode_buffer = "00" then
+					if MODE = "00" then
 						state <= MODE_OFF;
-					elsif mode_buffer = "01" or mode_buffer = "10" then
+					elsif MODE = "01" or MODE = "10" then
 						state	<= REQ_VOLTAGE_SINGLE;
-					elsif mode_buffer = "11" then
+					elsif MODE = "11" then
 						state <= REQ_VOLTAGE_CH1_DUAL;
 					end if;
 					--state	<= REQ_VOLTAGE_SINGLE;
@@ -109,8 +110,8 @@ process(CLK) begin
 		  
 		  --MODE OFF
 			when MODE_OFF =>
-				data_to_tx <= "00000000";
-				request_tx <= '0';
+				--data_to_tx <= "10000000";
+				--request_tx <= '0';
 				state <= WAIT_TIME_REQ;
 ----------------------------------------------------------------------------------------	
 ----------------------------------------------------------------------------------------	
@@ -140,7 +141,7 @@ process(CLK) begin
 				--data_to_tx(7 downto 2) <= "000000" ;
 				--data_to_tx(1 downto 0) <= mode_buffer;
 				--data_to_tx <= x"31";
-				data_to_tx <= "000000" & mode_buffer;
+				data_to_tx <= "100000" & mode_buffer;
 				request_tx <= '0';
 				state <= WAIT_SEND_MODE_SINGLE;
 				
@@ -185,7 +186,9 @@ process(CLK) begin
 			when REQ_VOLTAGE_CH1_DUAL =>
 				MOSI <= "1101";
 				START <= '1';
-				state <= WAIT_DONE_CH1_DUAL;
+				if DONE = '0' then
+					state <= WAIT_DONE_CH1_DUAL;
+				end if;
 				
 			when WAIT_DONE_CH1_DUAL =>
 				START <= '0';
@@ -197,8 +200,9 @@ process(CLK) begin
 			when REQ_VOLTAGE_CH2_DUAL =>
 				MOSI <= "1111";
 				START <= '1';
-				state <= WAIT_DONE_CH2_DUAL;
-				
+				if DONE = '0' then
+					state <= WAIT_DONE_CH2_DUAL;
+				end if;
 			when WAIT_DONE_CH2_DUAL =>
 				START <= '0';
 				if DONE = '1' then
@@ -210,7 +214,7 @@ process(CLK) begin
 			when SEND_MODE_DUAL =>
 				--data_to_tx(7 downto 2) <= "000000";
 				--data_to_tx(1 downto 0) <= mode_buffer;
-				data_to_tx <= "000000" & mode_buffer;
+				data_to_tx <= "100000" & mode_buffer;
 				request_tx <= '0';
 				state <= WAIT_SEND_MODE_DUAL;
 				

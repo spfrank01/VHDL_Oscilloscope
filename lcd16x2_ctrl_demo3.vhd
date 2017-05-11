@@ -30,7 +30,7 @@ use ieee.std_logic_unsigned.all;
 
 entity lcd16x2_ctrl_demo3 is
   port (
-    clk    : in  std_logic;
+    clk, sleep    : in  std_logic;
 	 data_in : in std_logic_vector(11 downto 0);
 	 mode_select : in std_logic_vector(1 downto 0);
     lcd_e  : out std_logic;
@@ -99,17 +99,25 @@ begin  -- architecture behavior
       lcd_db       => lcd_db,
       line1_buffer => line1_buffer,
       line2_buffer => line2_buffer);
-
+		
+		line1(127 downto 120) <= X"4f";  -- O
+		line1(119 downto 112) <= X"73";  -- s
+		line1(111 downto 104) <= X"63";  -- c
+		line1(103 downto 96)  <= X"69";  -- i
+		line1(95 downto 88)   <= X"6c";  -- l
+		line1(87 downto 80)   <= X"6c";  -- l
+		line1(79 downto 72)   <= X"6f";  -- o
+		line1(71 downto 64)   <= X"73";  -- s
+		line1(63 downto 56)   <= X"63";  -- c
+		line1(55 downto 48)   <= X"6f";  -- o
+		line1(47 downto 40)   <= X"70";  -- p
+		line1(39 downto 32)   <= X"65";  -- e
+		line1(31 downto 24)   <= X"20";  -- " "
+		line1(23 downto 16)   <= X"32";  -- 2
+		line1(15 downto 8)    <= X"43";  -- C
+		line1(7 downto 0)     <= X"48";  -- H
+		
    rst <= '0';
-   bit_to_int <= to_integer(unsigned(data_in)) * 330;
-	data <= bit_to_int/4095;
-	first_bit  <= data/100 + 48;
-	second_bit <= ((data /10) - (data/100)*10) + 48;
-	third_bit  <= (data mod 10) + 48;
-	
-	f <=  std_logic_vector(to_unsigned(first_bit, 8));	
-	s <=  std_logic_vector(to_unsigned(second_bit, 8));	
-	t <=  std_logic_vector(to_unsigned(third_bit, 8));
 
   -- switch lines every second
   process(clk)
@@ -119,184 +127,107 @@ begin  -- architecture behavior
       if timer = 0 then
 			timer <= 25000000;
 			
-			if mode_select = "00" then
-		
-				status1 <= X"4f";
-				status2 <= X"46";
-				status3 <= X"46";
-				
-				status4 <= X"4f";
-				status5 <= X"46";
-				status6 <= X"46";
-				
-				line1(127 downto 120) <= X"43";  -- C
-				line1(119 downto 112) <= X"48";  -- H
-				line1(111 downto 104) <= X"31";  -- 1
-				line1(103 downto 96)  <= X"3a";  -- :
-				line1(95 downto 88)   <= status1;  -- O
-				line1(87 downto 80)   <= status2;  -- N or F
-				line1(79 downto 72)   <= status3;  -- " " or F
-				line1(71 downto 64)   <= X"20";  -- " "
-				line1(63 downto 56)   <= X"43";  -- C
-				line1(55 downto 48)   <= X"48";  -- H
-				line1(47 downto 40)   <= X"32";  -- 2
-				line1(39 downto 32)   <= X"3a";  -- :
-				line1(31 downto 24)   <= status4;  -- O
-				line1(23 downto 16)   <= status5;  -- N or F
-				line1(15 downto 8)    <= status6;  -- " " or F
-				line1(7 downto 0)     <= X"20";  -- " "	
+			if sleep = '1' then
 			
-				line2(127 downto 120) <= X"43";  -- C
-				line2(119 downto 112) <= X"48";  -- H
-				line2(111 downto 104) <= X"31";  -- 1
-				line2(103 downto 96)  <= X"3a";  -- :
-				line2(95 downto 88)   <= X"20";  -- " "
-				line2(87 downto 80)   <= X"2e";  -- .
-				line2(79 downto 72)   <= X"20";  -- " "
-				line2(71 downto 64)   <= X"20";  -- " "
-				line2(63 downto 56)   <= X"43";  -- C
-				line2(55 downto 48)   <= X"48";  -- H
-				line2(47 downto 40)   <= X"32";  -- 2
-				line2(39 downto 32)   <= X"3a";  -- :
-				line2(31 downto 24)   <= X"20";  -- " "
-				line2(23 downto 16)   <= X"2e";  -- .
+				line2(127 downto 120) <= X"20";  -- " "
+				line2(119 downto 112) <= X"20";  -- " "
+				line2(111 downto 104) <= X"20";  -- " "
+				line2(103 downto 96)  <= X"4d";  -- M
+				line2(95 downto 88)   <= X"6f";  -- o
+				line2(87 downto 80)   <= X"64";  -- d
+				line2(79 downto 72)   <= X"65";  -- e
+				line2(71 downto 64)   <= X"3a";  -- :
+				line2(63 downto 56)   <= X"53";  -- S
+				line2(55 downto 48)   <= X"6c";  -- l
+				line2(47 downto 40)   <= X"65";  -- e
+				line2(39 downto 32)   <= X"65";  -- e
+				line2(31 downto 24)   <= X"70";  -- p
+				line2(23 downto 16)   <= X"20";  -- " "
 				line2(15 downto 8)    <= X"20";  -- " "
 				line2(7 downto 0)     <= X"20";  -- " "
 				
-			elsif mode_select = "01" then
+			elsif sleep = '0' then
 			
-				status1 <= X"4f";
-				status2 <= X"4e";
-				status3 <= X"20";
-				
-				status4 <= X"4f";
-				status5 <= X"46";
-				status6 <= X"46";
-				
-				line1(127 downto 120) <= X"43";  -- C
-				line1(119 downto 112) <= X"48";  -- H
-				line1(111 downto 104) <= X"31";  -- 1
-				line1(103 downto 96)  <= X"3a";  -- :
-				line1(95 downto 88)   <= status1;  -- O
-				line1(87 downto 80)   <= status2;  -- N or F
-				line1(79 downto 72)   <= status3;  -- " " or F
-				line1(71 downto 64)   <= X"20";  -- " "
-				line1(63 downto 56)   <= X"43";  -- C
-				line1(55 downto 48)   <= X"48";  -- H
-				line1(47 downto 40)   <= X"32";  -- 2
-				line1(39 downto 32)   <= X"3a";  -- :
-				line1(31 downto 24)   <= status4;  -- O
-				line1(23 downto 16)   <= status5;  -- N or F
-				line1(15 downto 8)    <= status6;  -- " " or F
-				line1(7 downto 0)     <= X"20";  -- " "	
+			if mode_select = "00" then
 			
-				line2(127 downto 120) <= X"43";  -- C
-				line2(119 downto 112) <= X"48";  -- H
-				line2(111 downto 104) <= X"31";  -- 1
-				line2(103 downto 96)  <= X"3a";  -- :
-				line2(95 downto 88)   <= f;  -- " "
-				line2(87 downto 80)   <= X"2e";  -- .
-				line2(79 downto 72)   <= s;  -- " "
-				line2(71 downto 64)   <= t;  -- " "
-				line2(63 downto 56)   <= X"43";  -- C
-				line2(55 downto 48)   <= X"48";  -- H
-				line2(47 downto 40)   <= X"32";  -- 2
-				line2(39 downto 32)   <= X"3a";  -- :
+				line2(127 downto 120) <= X"20";  -- " "
+				line2(119 downto 112) <= X"20";  -- " "
+				line2(111 downto 104) <= X"20";  -- " "
+				line2(103 downto 96)  <= X"20";  -- " "
+				line2(95 downto 88)   <= X"4d";  -- M
+				line2(87 downto 80)   <= X"6f";  -- o
+				line2(79 downto 72)   <= X"64";  -- d
+				line2(71 downto 64)   <= X"65";  -- e
+				line2(63 downto 56)   <= X"3a";  -- :
+				line2(55 downto 48)   <= X"4f";  -- O
+				line2(47 downto 40)   <= X"66";  -- f
+				line2(39 downto 32)   <= X"66";  -- f
 				line2(31 downto 24)   <= X"20";  -- " "
-				line2(23 downto 16)   <= X"2e";  -- .
+				line2(23 downto 16)   <= X"20";  -- " "
 				line2(15 downto 8)    <= X"20";  -- " "
+				line2(7 downto 0)     <= X"20";  -- " "
+				
+			elsif mode_select = "01" then	
+			
+				line2(127 downto 120) <= X"20";  -- " "
+				line2(119 downto 112) <= X"4d";  -- M
+				line2(111 downto 104) <= X"6f";  -- o
+				line2(103 downto 96)  <= X"64";  -- d
+				line2(95 downto 88)   <= X"65";  -- e
+				line2(87 downto 80)   <= X"3a";  -- :
+				line2(79 downto 72)   <= X"53";  -- S
+				line2(71 downto 64)   <= X"69";  -- i
+				line2(63 downto 56)   <= X"6e";  -- n
+				line2(55 downto 48)   <= X"67";  -- g
+				line2(47 downto 40)   <= X"6c";  -- g
+				line2(39 downto 32)   <= X"65";  -- e
+				line2(31 downto 24)   <= X"43";  -- C
+				line2(23 downto 16)   <= X"48";  -- H
+				line2(15 downto 8)    <= X"31";  -- 1
 				line2(7 downto 0)     <= X"20";  -- " "
 				
 			elsif mode_select = "10" then
 			
-				status1 <= X"4f";
-				status2 <= X"46";
-				status3 <= X"46";
-				
-				status4 <= X"4f";
-				status5 <= X"4e";
-				status6 <= X"20";
-				
-				line1(127 downto 120) <= X"43";  -- C
-				line1(119 downto 112) <= X"48";  -- H
-				line1(111 downto 104) <= X"31";  -- 1
-				line1(103 downto 96)  <= X"3a";  -- :
-				line1(95 downto 88)   <= status1;  -- O
-				line1(87 downto 80)   <= status2;  -- N or F
-				line1(79 downto 72)   <= status3;  -- " " or F
-				line1(71 downto 64)   <= X"20";  -- " "
-				line1(63 downto 56)   <= X"43";  -- C
-				line1(55 downto 48)   <= X"48";  -- H
-				line1(47 downto 40)   <= X"32";  -- 2
-				line1(39 downto 32)   <= X"3a";  -- :
-				line1(31 downto 24)   <= status4;  -- O
-				line1(23 downto 16)   <= status5;  -- N or F
-				line1(15 downto 8)    <= status6;  -- " " or F
-				line1(7 downto 0)     <= X"20";  -- " "	
-			
-				line2(127 downto 120) <= X"43";  -- C
-				line2(119 downto 112) <= X"48";  -- H
-				line2(111 downto 104) <= X"31";  -- 1
-				line2(103 downto 96)  <= X"3a";  -- :
-				line2(95 downto 88)   <= X"20";  -- " "
-				line2(87 downto 80)   <= X"2e";  -- .
-				line2(79 downto 72)   <= X"20";  -- " "
-				line2(71 downto 64)   <= X"20";  -- " "
-				line2(63 downto 56)   <= X"43";  -- C
-				line2(55 downto 48)   <= X"48";  -- H
-				line2(47 downto 40)   <= X"32";  -- 2
-				line2(39 downto 32)   <= X"3a";  -- :
-				line2(31 downto 24)   <= f;  -- " "
-				line2(23 downto 16)   <= X"2e";  -- .
-				line2(15 downto 8)    <= s;  -- " "
-				line2(7 downto 0)     <= t;  -- " "
+				line2(127 downto 120) <= X"20";  -- " "
+				line2(119 downto 112) <= X"4d";  -- M
+				line2(111 downto 104) <= X"6f";  -- o
+				line2(103 downto 96)  <= X"64";  -- d
+				line2(95 downto 88)   <= X"65";  -- e
+				line2(87 downto 80)   <= X"3a";  -- :
+				line2(79 downto 72)   <= X"53";  -- S
+				line2(71 downto 64)   <= X"69";  -- i
+				line2(63 downto 56)   <= X"6e";  -- n
+				line2(55 downto 48)   <= X"67";  -- g
+				line2(47 downto 40)   <= X"6c";  -- g
+				line2(39 downto 32)   <= X"65";  -- e
+				line2(31 downto 24)   <= X"43";  -- C
+				line2(23 downto 16)   <= X"48";  -- H
+				line2(15 downto 8)    <= X"32";  -- 2
+				line2(7 downto 0)     <= X"20";  -- " "
 				
 			elsif mode_select = "11" then
 			
-				status1 <= X"4f";
-				status2 <= X"4e";
-				status3 <= X"20";
-				
-				status4 <= X"4f";
-				status5 <= X"4e";
-				status6 <= X"20";
-				
-				line1(127 downto 120) <= X"43";  -- C
-				line1(119 downto 112) <= X"48";  -- H
-				line1(111 downto 104) <= X"31";  -- 1
-				line1(103 downto 96)  <= X"3a";  -- :
-				line1(95 downto 88)   <= status1;  -- O
-				line1(87 downto 80)   <= status2;  -- N or F
-				line1(79 downto 72)   <= status3;  -- " " or F
-				line1(71 downto 64)   <= X"20";  -- " "
-				line1(63 downto 56)   <= X"43";  -- C
-				line1(55 downto 48)   <= X"48";  -- H
-				line1(47 downto 40)   <= X"32";  -- 2
-				line1(39 downto 32)   <= X"3a";  -- :
-				line1(31 downto 24)   <= status4;  -- O
-				line1(23 downto 16)   <= status5;  -- N or F
-				line1(15 downto 8)    <= status6;  -- " " or F
-				line1(7 downto 0)     <= X"20";  -- " "	
-			
-				line2(127 downto 120) <= X"43";  -- C
-				line2(119 downto 112) <= X"48";  -- H
-				line2(111 downto 104) <= X"31";  -- 1
-				line2(103 downto 96)  <= X"3a";  -- :
-				line2(95 downto 88)   <= X"20";  -- " "
-				line2(87 downto 80)   <= X"2e";  -- .
-				line2(79 downto 72)   <= X"20";  -- " "
-				line2(71 downto 64)   <= X"20";  -- " "
-				line2(63 downto 56)   <= X"43";  -- C
-				line2(55 downto 48)   <= X"48";  -- H
-				line2(47 downto 40)   <= X"32";  -- 2
-				line2(39 downto 32)   <= X"3a";  -- :
-				line2(31 downto 24)   <= X"20";  -- " "
-				line2(23 downto 16)   <= X"2e";  -- .
-				line2(15 downto 8)    <= X"20";  -- " "
-				line2(7 downto 0)     <= X"20";  -- " "
+				line2(127 downto 120) <= X"4d";  -- C
+				line2(119 downto 112) <= X"6f";  -- H
+				line2(111 downto 104) <= X"64";  -- 1
+				line2(103 downto 96)  <= X"65";  -- :
+				line2(95 downto 88)   <= X"3a";  -- " "
+				line2(87 downto 80)   <= X"44";  -- .
+				line2(79 downto 72)   <= X"75";  -- " "
+				line2(71 downto 64)   <= X"61";  -- " "
+				line2(63 downto 56)   <= X"6c";  -- C
+				line2(55 downto 48)   <= X"43";  -- H
+				line2(47 downto 40)   <= X"68";  -- 2
+				line2(39 downto 32)   <= X"61";  -- :
+				line2(31 downto 24)   <= X"6e";  -- " "
+				line2(23 downto 16)   <= X"6e";  -- .
+				line2(15 downto 8)    <= X"65";  -- " "
+				line2(7 downto 0)     <= X"6c";  -- " "
 				
 			end if;
-				
+			
+			end if;
+			
       else
          timer <= timer - 1;
       

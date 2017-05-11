@@ -5,7 +5,7 @@ use ieee.math_real.all;
 entity rs232_rx is
 	generic(
 		system_speed : integer := 50e6;		-- clock speed, in Hz
-		baudrate		 : integer := 115200);		--	baudrate
+		baudrate		 : integer := 9600);		--	baudrate
 	port(
 		clk_i			: in	std_logic;	-- system clock
       req_o : out std_logic;

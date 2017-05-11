@@ -8,25 +8,37 @@ entity Control is
 			req_i : in std_logic;
 	      rst_i  : in	 std_logic;		-- synchronous reset, active low
 			mode_data : out std_logic_vector(1 downto 0);
+			sleep : out std_logic:='0';
 			DATA_IN : in std_logic_vector(7 downto 0));
 end Control;
 
 architecture behave of Control is
 	signal channel_tem : std_logic_vector(3 downto 0);
+	constant TIME_SLEEP : integer := 150000000;
 	type state_type is (
 		check_start_bit,
 		check_mode_bit);
 	signal state : state_type := check_start_bit;
+	signal count : integer := 0;
 	begin
 		process(CLK, req_i, rst_i)
 			begin
          if rst_i = '0' then
 				state <= check_start_bit;
 			elsif rising_edge(CLK)then
+			
+				if count > TIME_SLEEP then
+					mode_data <= "00";
+					sleep <= '1';
+					count <= 0;
+				end if;
+			
 				case state is
 					when check_start_bit =>
-					
+						count <= count + 1;
 						if req_i = '0' and Data_IN = x"23" then
+							sleep <= '0';
+							count <= 0;
 							state <= check_mode_bit;
 						end if;
 					

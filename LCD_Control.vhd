@@ -22,12 +22,13 @@ architecture behavior of LCD_Control is
 			req_i : in std_logic;
 	      rst_i  : in	 std_logic;		-- synchronous reset, active low
 			mode_data : out std_logic_vector(1 downto 0);
+			sleep : out std_logic:='0';
 			DATA_IN : in std_logic_vector(7 downto 0));
 	end component;
 	
 	component lcd16x2_ctrl_demo3 is
 		port (
-			clk    : in  std_logic;
+			clk, sleep    : in  std_logic;
 			data_in : in std_logic_vector(11 downto 0);
 			mode_select : in std_logic_vector(1 downto 0);
 			lcd_e  : out std_logic;
@@ -55,12 +56,13 @@ architecture behavior of LCD_Control is
 	signal start_spi : std_logic;
 	signal done_spi : std_logic;
 	signal HOLD_SS_N : std_logic; -- status CS logic before active
+	signal sleep : std_logic;
 	
 	begin
 		U0:Control
-			port map(CLK, rx_out, RST_N, mode_data_lcd, data_temp);
+			port map(CLK, rx_out, RST_N, mode_data_lcd, sleep, data_temp);
 		U1:lcd16x2_ctrl_demo3
-			port map(CLK, signal_data, mode_data_lcd, LCD_E, LCD_RS, LCD_RW, LCD_DB);
+			port map(CLK, sleep, signal_data, mode_data_lcd, LCD_E, LCD_RS, LCD_RW, LCD_DB);
 		U2:rs232_rx
 			port map(CLK, RST_N, rx_out, data_temp, RX);
 		mode_data <= mode_data_lcd;
