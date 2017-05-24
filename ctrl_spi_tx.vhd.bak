@@ -38,7 +38,7 @@ end component;
 component rs232_tx is
   generic(
     SYSTEM_SPEED : integer := 50e6;   	-- clock speed, in Hz
-    BAUDRATE     : integer :=115200);  	-- baudrate
+    BAUDRATE     : integer :=9600);  	-- baudrate
   port(
     clk_i  : in  std_logic;   -- system clock
     rst_i  : in  std_logic; 	-- synchronous reset, active-Low

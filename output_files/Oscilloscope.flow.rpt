@@ -1,5 +1,5 @@
 Flow report for Oscilloscope
-Thu May 11 18:18:46 2017
+Wed May 24 16:31:34 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu May 11 18:18:46 2017      ;
+; Flow Status                        ; Successful - Wed May 24 16:31:34 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Oscilloscope                               ;
 ; Top-level Entity Name              ; VHDL_Oscilloscope                          ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C10E144C8                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,469 / 10,320 ( 24 % )                    ;
-;     Total combinational functions  ; 2,451 / 10,320 ( 24 % )                    ;
-;     Dedicated logic registers      ; 332 / 10,320 ( 3 % )                       ;
-; Total registers                    ; 332                                        ;
+; Total logic elements               ; 2,451 / 10,320 ( 24 % )                    ;
+;     Total combinational functions  ; 2,431 / 10,320 ( 24 % )                    ;
+;     Dedicated logic registers      ; 323 / 10,320 ( 3 % )                       ;
+; Total registers                    ; 323                                        ;
 ; Total pins                         ; 15 / 95 ( 16 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                        ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/11/2017 18:17:39 ;
+; Start date & time ; 05/24/2017 16:29:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Oscilloscope        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name       ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 272897457442924.149450145903480 ; --            ; --                ; --             ;
+; COMPILER_SIGNATURE_ID               ; 272897457442924.149561819009224 ; --            ; --                ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --                ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --                ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --                ; --             ;
@@ -94,12 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 637 MB              ; 00:00:10                           ;
-; Fitter                    ; 00:00:25     ; 1.4                     ; 1061 MB             ; 00:00:25                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 495 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 577 MB              ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 465 MB              ; 00:00:04                           ;
-; Total                     ; 00:00:53     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis      ; 00:00:26     ; 1.0                     ; 625 MB              ; 00:00:11                           ;
+; Fitter                    ; 00:00:33     ; 1.2                     ; 1064 MB             ; 00:00:25                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 476 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:11     ; 1.2                     ; 596 MB              ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:13     ; 1.0                     ; 469 MB              ; 00:00:05                           ;
+; Total                     ; 00:01:27     ; --                      ; --                  ; 00:00:50                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
