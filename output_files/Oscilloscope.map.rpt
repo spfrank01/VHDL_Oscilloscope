@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Oscilloscope
-Wed May 24 16:30:18 2017
+Wed May 24 16:42:10 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,7 +13,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|state
+  8. State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state
   9. State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state
  10. State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state
  11. State Machine - |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|state
@@ -28,12 +28,12 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  20. Parameter Settings for User Entity Instance: LCD_Control:CtrlLcdRx|rs232_rx:U2
  21. Parameter Settings for User Entity Instance: ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI
  22. Parameter Settings for User Entity Instance: ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX
- 23. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1
- 24. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2
- 25. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod0
- 26. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0
- 27. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0
- 28. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1
+ 24. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2
+ 25. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0
+ 26. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0
+ 27. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1
  29. lpm_mult Parameter Settings by Entity Instance
  30. Port Connectivity Checks: "ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI"
  31. Port Connectivity Checks: "LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT"
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 24 16:30:18 2017      ;
+; Analysis & Synthesis Status        ; Successful - Wed May 24 16:42:10 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Oscilloscope                               ;
 ; Top-level Entity Name              ; VHDL_Oscilloscope                          ;
@@ -198,9 +198,9 @@ applicable agreement for further details.
 ; rs232_rx.vhd                     ; yes             ; User VHDL File               ; C:/altera/13.1/hl_MiniProject/Oscilloscope/rs232_rx.vhd                ;         ;
 ; lcd16x2_ctrl_demo3.vhd           ; yes             ; User VHDL File               ; C:/altera/13.1/hl_MiniProject/Oscilloscope/lcd16x2_ctrl_demo3.vhd      ;         ;
 ; ctrl_spi_tx.vhd                  ; yes             ; User VHDL File               ; C:/altera/13.1/hl_MiniProject/Oscilloscope/ctrl_spi_tx.vhd             ;         ;
-; controller_Spi_tx.vhd            ; yes             ; User VHDL File               ; C:/altera/13.1/hl_MiniProject/Oscilloscope/controller_Spi_tx.vhd       ;         ;
 ; Control.vhd                      ; yes             ; User VHDL File               ; C:/altera/13.1/hl_MiniProject/Oscilloscope/Control.vhd                 ;         ;
 ; VHDL_Oscilloscope.vhd            ; yes             ; User VHDL File               ; C:/altera/13.1/hl_MiniProject/Oscilloscope/VHDL_Oscilloscope.vhd       ;         ;
+; send_voltage_value.vhd           ; yes             ; User VHDL File               ; C:/altera/13.1/hl_MiniProject/Oscilloscope/send_voltage_value.vhd      ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
@@ -273,56 +273,56 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                      ;
-+------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                    ; Library Name ;
-+------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |VHDL_Oscilloscope                                   ; 2430 (1)          ; 323 (0)      ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |VHDL_Oscilloscope                                                                                                                                                                     ; work         ;
-;    |LCD_Control:CtrlLcdRx|                           ; 356 (0)           ; 150 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx                                                                                                                                               ; work         ;
-;       |Control:U0|                                   ; 55 (55)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0                                                                                                                                    ; work         ;
-;       |lcd16x2_ctrl_demo3:U1|                        ; 244 (59)          ; 81 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1                                                                                                                         ; work         ;
-;          |lcd16x2_ctrl:DUT|                          ; 185 (185)         ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT                                                                                                        ; work         ;
-;       |rs232_rx:U2|                                  ; 57 (57)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2                                                                                                                                   ; work         ;
-;    |ctrl_spi_tx:CtrlSpiTx|                           ; 2073 (0)          ; 173 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx                                                                                                                                               ; work         ;
-;       |SPI_master:SPI|                               ; 71 (71)           ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI                                                                                                                                ; work         ;
-;       |controller_Spi_tx:Ctrl|                       ; 1952 (163)        ; 94 (94)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl                                                                                                                        ; work         ;
-;          |lpm_divide:Div0|                           ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0                                                                                                        ; work         ;
-;             |lpm_divide_jvo:auto_generated|          ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated                                                                          ; work         ;
-;                |abs_divider_nbg:divider|             ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
-;                   |alt_u_div_36f:divider|            ; 154 (154)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider                            ; work         ;
-;          |lpm_divide:Div1|                           ; 402 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1                                                                                                        ; work         ;
-;             |lpm_divide_7jm:auto_generated|          ; 402 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated                                                                          ; work         ;
-;                |sign_div_unsign_8nh:divider|         ; 402 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider                                              ; work         ;
-;                   |alt_u_div_s8f:divider|            ; 402 (402)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider                        ; work         ;
-;          |lpm_divide:Div2|                           ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2                                                                                                        ; work         ;
-;             |lpm_divide_jvo:auto_generated|          ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated                                                                          ; work         ;
-;                |abs_divider_nbg:divider|             ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
-;                   |alt_u_div_36f:divider|            ; 154 (154)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider                            ; work         ;
-;          |lpm_divide:Mod0|                           ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod0                                                                                                        ; work         ;
-;             |lpm_divide_3po:auto_generated|          ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                                          ; work         ;
-;                |abs_divider_4dg:divider|             ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                                  ; work         ;
-;                   |alt_u_div_t8f:divider|            ; 509 (509)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                            ; work         ;
-;          |lpm_divide:Mod1|                           ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1                                                                                                        ; work         ;
-;             |lpm_divide_3po:auto_generated|          ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                                          ; work         ;
-;                |abs_divider_4dg:divider|             ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                                  ; work         ;
-;                   |alt_u_div_t8f:divider|            ; 509 (509)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                            ; work         ;
-;          |lpm_mult:Mult0|                            ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0                                                                                                         ; work         ;
-;             |multcore:mult_core|                     ; 61 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
-;                |mpar_add:padder|                     ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
-;                   |lpm_add_sub:adder[0]|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
-;                      |add_sub_gfh:auto_generated|    ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gfh:auto_generated                      ; work         ;
-;                   |mpar_add:sub_par_add|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
-;                      |lpm_add_sub:adder[0]|          ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
-;                         |add_sub_bfh:auto_generated| ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bfh:auto_generated ; work         ;
-;       |rs232_tx:rsTX|                                ; 50 (50)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX                                                                                                                                 ; work         ;
-+------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                       ;
++------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                     ; Library Name ;
++------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |VHDL_Oscilloscope                                   ; 2430 (1)          ; 323 (0)      ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |VHDL_Oscilloscope                                                                                                                                                                      ; work         ;
+;    |LCD_Control:CtrlLcdRx|                           ; 356 (0)           ; 150 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx                                                                                                                                                ; work         ;
+;       |Control:U0|                                   ; 55 (55)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0                                                                                                                                     ; work         ;
+;       |lcd16x2_ctrl_demo3:U1|                        ; 244 (59)          ; 81 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1                                                                                                                          ; work         ;
+;          |lcd16x2_ctrl:DUT|                          ; 185 (185)         ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT                                                                                                         ; work         ;
+;       |rs232_rx:U2|                                  ; 57 (57)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2                                                                                                                                    ; work         ;
+;    |ctrl_spi_tx:CtrlSpiTx|                           ; 2073 (0)          ; 173 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx                                                                                                                                                ; work         ;
+;       |SPI_master:SPI|                               ; 71 (71)           ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI                                                                                                                                 ; work         ;
+;       |rs232_tx:rsTX|                                ; 50 (50)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX                                                                                                                                  ; work         ;
+;       |send_voltage_value:Ctrl|                      ; 1952 (163)        ; 94 (94)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl                                                                                                                        ; work         ;
+;          |lpm_divide:Div0|                           ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0                                                                                                        ; work         ;
+;             |lpm_divide_jvo:auto_generated|          ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated                                                                          ; work         ;
+;                |abs_divider_nbg:divider|             ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
+;                   |alt_u_div_36f:divider|            ; 154 (154)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider                            ; work         ;
+;          |lpm_divide:Div1|                           ; 402 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1                                                                                                        ; work         ;
+;             |lpm_divide_7jm:auto_generated|          ; 402 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated                                                                          ; work         ;
+;                |sign_div_unsign_8nh:divider|         ; 402 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider                                              ; work         ;
+;                   |alt_u_div_s8f:divider|            ; 402 (402)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider                        ; work         ;
+;          |lpm_divide:Div2|                           ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2                                                                                                        ; work         ;
+;             |lpm_divide_jvo:auto_generated|          ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated                                                                          ; work         ;
+;                |abs_divider_nbg:divider|             ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
+;                   |alt_u_div_36f:divider|            ; 154 (154)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider                            ; work         ;
+;          |lpm_divide:Mod0|                           ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0                                                                                                        ; work         ;
+;             |lpm_divide_3po:auto_generated|          ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                                          ; work         ;
+;                |abs_divider_4dg:divider|             ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                                  ; work         ;
+;                   |alt_u_div_t8f:divider|            ; 509 (509)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                            ; work         ;
+;          |lpm_divide:Mod1|                           ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1                                                                                                        ; work         ;
+;             |lpm_divide_3po:auto_generated|          ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                                          ; work         ;
+;                |abs_divider_4dg:divider|             ; 509 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                                  ; work         ;
+;                   |alt_u_div_t8f:divider|            ; 509 (509)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                            ; work         ;
+;          |lpm_mult:Mult0|                            ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0                                                                                                         ; work         ;
+;             |multcore:mult_core|                     ; 61 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
+;                |mpar_add:padder|                     ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;                   |lpm_add_sub:adder[0]|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                      |add_sub_gfh:auto_generated|    ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gfh:auto_generated                      ; work         ;
+;                   |mpar_add:sub_par_add|             ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                      |lpm_add_sub:adder[0]|          ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                         |add_sub_bfh:auto_generated| ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bfh:auto_generated ; work         ;
++------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+; State Machine - |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
 +----------------------------------------+----------------------------------------+-----------------------------------+----------------------------------------+-----------------------------------+----------------------------------------+-----------------------------------+----------------------------------------+-----------------------------------+---------------------------+----------------------+--------------------------+----------------------------+--------------------------+----------------------------+--------------------------------------+---------------------------------+--------------------------------------+---------------------------------+-----------------------------+------------------------+------------------------+--------------------------+---------------------+
 ; Name                                   ; state.WAIT_SEND_VOLTAGE_CH2_PART2_DUAL ; state.SEND_VOLTAGE_CH2_PART2_DUAL ; state.WAIT_SEND_VOLTAGE_CH2_PART1_DUAL ; state.SEND_VOLTAGE_CH2_PART1_DUAL ; state.WAIT_SEND_VOLTAGE_CH1_PART2_DUAL ; state.SEND_VOLTAGE_CH1_PART2_DUAL ; state.WAIT_SEND_VOLTAGE_CH1_PART1_DUAL ; state.SEND_VOLTAGE_CH1_PART1_DUAL ; state.WAIT_SEND_MODE_DUAL ; state.SEND_MODE_DUAL ; state.WAIT_DONE_CH2_DUAL ; state.REQ_VOLTAGE_CH2_DUAL ; state.WAIT_DONE_CH1_DUAL ; state.REQ_VOLTAGE_CH1_DUAL ; state.WAIT_SEND_VOLTAGE_PART2_SINGLE ; state.SEND_VOLTAGE_PART2_SINGLE ; state.WAIT_SEND_VOLTAGE_PART1_SINGLE ; state.SEND_VOLTAGE_PART1_SINGLE ; state.WAIT_SEND_MODE_SINGLE ; state.SEND_MODE_SINGLE ; state.WAIT_DONE_SINGLE ; state.REQ_VOLTAGE_SINGLE ; state.WAIT_TIME_REQ ;
 +----------------------------------------+----------------------------------------+-----------------------------------+----------------------------------------+-----------------------------------+----------------------------------------+-----------------------------------+----------------------------------------+-----------------------------------+---------------------------+----------------------+--------------------------+----------------------------+--------------------------+----------------------------+--------------------------------------+---------------------------------+--------------------------------------+---------------------------------+-----------------------------+------------------------+------------------------+--------------------------+---------------------+
@@ -430,62 +430,62 @@ Encoding Type:  One-Hot
 +--------------------+-------------------+--------------------+-------------------+--------------------+--------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                  ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
-; Register name                                                                                                                                           ; Reason for Removal                                                        ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|voltage_data2[24..31]                                                                                      ; Stuck at GND due to stuck port data_in                                    ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[0,1,4,7,11,15,16,20,23,31,35,39,44,47,52,55,63,71,75,79,87,95,97,100,103,108,111,116,119,121,124,127] ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[36]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[57,125]                                                                                               ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[34]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[41,66,80]                                                                                             ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[33]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[72,93,98,102]                                                                                         ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[62]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[30]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[21,74,77,82,86,91]                                                                                    ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[29]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[40,56,65,68,99]                                                                                       ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[28]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[2,3,10,14,17,18,26,92,113,120,122]                                                                    ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[27]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[19,43,58,76,106,110,112,114,115,118]                                                                  ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[25]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[12,73,84,104,105,107]                                                                                 ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[24]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[5,37,38,45,46,54,69,78]                                                                               ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[13]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[123,126]                                                                                              ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[6]          ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[50,85,88,90,94]                                                                                       ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[42]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[49,64,70,101]                                                                                         ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[48]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[60]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[51]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[67]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[53]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[61]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[59]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[83]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[81]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[96]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[89]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[42]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[34]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[30]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[117]                                                                                                  ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[29]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[6]                                                                                                    ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[27]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[22]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[25]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[109]                                                                                                  ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[13]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[59]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[48]         ;
-; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[2,3]                                                                                                          ; Merged with ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[0]                  ;
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|MOSI[2,3]                                                                                                  ; Merged with ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|MOSI[0]          ;
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|voltage_data[25..31]                                                                                       ; Merged with ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|voltage_data[24] ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[36]                                                                                                   ; Stuck at GND due to stuck port data_in                                    ;
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|voltage_data[24]                                                                                           ; Stuck at GND due to stuck port data_in                                    ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[13]                                                                                                   ; Stuck at VCC due to stuck port data_in                                    ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[48]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[28]         ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[33]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]         ;
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|MOSI[0]                                                                                                    ; Stuck at VCC due to stuck port data_in                                    ;
-; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[0]                                                                                                            ; Stuck at VCC due to stuck port data_in                                    ;
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|voltage_data2[13..23]                                                                                      ; Stuck at GND due to stuck port data_in                                    ;
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|voltage_data[13..23]                                                                                       ; Stuck at GND due to stuck port data_in                                    ;
-; Total Number of Removed Registers = 159                                                                                                                 ;                                                                           ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+; Register name                                                                                                                                           ; Reason for Removal                                                         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[24..31]                                                                                     ; Stuck at GND due to stuck port data_in                                     ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[0,1,4,7,11,15,16,20,23,31,35,39,44,47,52,55,63,71,75,79,87,95,97,100,103,108,111,116,119,121,124,127] ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[36]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[57,125]                                                                                               ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[34]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[41,66,80]                                                                                             ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[33]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[72,93,98,102]                                                                                         ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[62]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[30]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[21,74,77,82,86,91]                                                                                    ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[29]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[40,56,65,68,99]                                                                                       ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[28]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[2,3,10,14,17,18,26,92,113,120,122]                                                                    ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[27]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[19,43,58,76,106,110,112,114,115,118]                                                                  ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[25]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[12,73,84,104,105,107]                                                                                 ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[24]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[5,37,38,45,46,54,69,78]                                                                               ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[13]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[123,126]                                                                                              ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[6]           ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[50,85,88,90,94]                                                                                       ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[42]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[49,64,70,101]                                                                                         ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[48]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[60]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[51]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[67]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[53]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[61]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[59]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[83]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[81]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[96]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[89]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[42]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[34]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[30]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[117]                                                                                                  ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[29]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[6]                                                                                                    ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[27]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[22]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[25]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[109]                                                                                                  ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[13]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[59]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[48]          ;
+; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[2,3]                                                                                                          ; Merged with ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[0]                   ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|MOSI[2,3]                                                                                                 ; Merged with ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|MOSI[0]          ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[25..31]                                                                                      ; Merged with ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[24] ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[36]                                                                                                   ; Stuck at GND due to stuck port data_in                                     ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[24]                                                                                          ; Stuck at GND due to stuck port data_in                                     ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[13]                                                                                                   ; Stuck at VCC due to stuck port data_in                                     ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[48]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[28]          ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[33]                                                                                                   ; Merged with LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]          ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|MOSI[0]                                                                                                   ; Stuck at VCC due to stuck port data_in                                     ;
+; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[0]                                                                                                            ; Stuck at VCC due to stuck port data_in                                     ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[13..23]                                                                                     ; Stuck at GND due to stuck port data_in                                     ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[13..23]                                                                                      ; Stuck at GND due to stuck port data_in                                     ;
+; Total Number of Removed Registers = 159                                                                                                                 ;                                                                            ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                     ;
-+------------------------------------------------------+---------------------------+----------------------------------------------+
-; Register name                                        ; Reason for Removal        ; Registers Removed due to This Register       ;
-+------------------------------------------------------+---------------------------+----------------------------------------------+
-; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|MOSI[0] ; Stuck at VCC              ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[0] ;
-;                                                      ; due to stuck port data_in ;                                              ;
-+------------------------------------------------------+---------------------------+----------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                      ;
++-------------------------------------------------------+---------------------------+----------------------------------------------+
+; Register name                                         ; Reason for Removal        ; Registers Removed due to This Register       ;
++-------------------------------------------------------+---------------------------+----------------------------------------------+
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|MOSI[0] ; Stuck at VCC              ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[0] ;
+;                                                       ; due to stuck port data_in ;                                              ;
++-------------------------------------------------------+---------------------------+----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -520,8 +520,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|voltage_data[2]          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|count_time[27]           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[2]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|count_time[27]          ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]                 ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0|count[10]                            ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]                           ;
@@ -534,8 +534,8 @@ Encoding Type:  One-Hot
 ; 6:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[8]                 ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0|mode_data[0]                         ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[0]                    ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|data_to_tx[7]            ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|data_to_tx[1]            ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[7]           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[1]           ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[6]   ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[15]  ;
 ; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[8]   ;
@@ -545,8 +545,8 @@ Encoding Type:  One-Hot
 ; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|state                               ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state                             ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|state                               ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Selector14               ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Selector3                ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector14              ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
 
@@ -594,174 +594,174 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1 ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                             ;
-; LPM_WIDTHD             ; 32             ; Untyped                                                             ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                             ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                             ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                             ;
-; CBXI_PARAMETER         ; lpm_divide_3po ; Untyped                                                             ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                             ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                             ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                      ;
-+------------------------+----------------+---------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                              ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_3po ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                              ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_jvo ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                              ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_3po ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                              ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_jvo ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2 ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                             ;
-; LPM_WIDTHD             ; 8              ; Untyped                                                             ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                             ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                             ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                             ;
-; CBXI_PARAMETER         ; lpm_divide_jvo ; Untyped                                                             ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                             ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                             ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                      ;
-+------------------------+----------------+---------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0 ;
++------------------------------------------------+-------------+------------------------------------------------+
+; Parameter Name                                 ; Value       ; Type                                           ;
++------------------------------------------------+-------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE                                 ;
+; LPM_WIDTHA                                     ; 12          ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 12          ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 24          ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 24          ; Untyped                                        ;
+; LPM_WIDTHS                                     ; 1           ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; UNSIGNED    ; Untyped                                        ;
+; LPM_PIPELINE                                   ; 0           ; Untyped                                        ;
+; LATENCY                                        ; 0           ; Untyped                                        ;
+; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; YES         ; Untyped                                        ;
+; USE_EAB                                        ; OFF         ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 5           ; Untyped                                        ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped                                        ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped                                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; NOTHING     ; Untyped                                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped                                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped                                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped                                        ;
++------------------------------------------------+-------------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod0 ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                             ;
-; LPM_WIDTHD             ; 32             ; Untyped                                                             ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                             ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                             ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                             ;
-; CBXI_PARAMETER         ; lpm_divide_3po ; Untyped                                                             ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                             ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                             ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                      ;
-+------------------------+----------------+---------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 24             ; Untyped                                                              ;
+; LPM_WIDTHD             ; 12             ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_7jm ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0 ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                             ;
-; LPM_WIDTHD             ; 8              ; Untyped                                                             ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                             ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                             ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                             ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                             ;
-; CBXI_PARAMETER         ; lpm_divide_jvo ; Untyped                                                             ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                             ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                             ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                      ;
-+------------------------+----------------+---------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0 ;
-+------------------------------------------------+-------------+-----------------------------------------------+
-; Parameter Name                                 ; Value       ; Type                                          ;
-+------------------------------------------------+-------------+-----------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE                                ;
-; LPM_WIDTHA                                     ; 12          ; Untyped                                       ;
-; LPM_WIDTHB                                     ; 12          ; Untyped                                       ;
-; LPM_WIDTHP                                     ; 24          ; Untyped                                       ;
-; LPM_WIDTHR                                     ; 24          ; Untyped                                       ;
-; LPM_WIDTHS                                     ; 1           ; Untyped                                       ;
-; LPM_REPRESENTATION                             ; UNSIGNED    ; Untyped                                       ;
-; LPM_PIPELINE                                   ; 0           ; Untyped                                       ;
-; LATENCY                                        ; 0           ; Untyped                                       ;
-; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped                                       ;
-; INPUT_B_IS_CONSTANT                            ; YES         ; Untyped                                       ;
-; USE_EAB                                        ; OFF         ; Untyped                                       ;
-; MAXIMIZE_SPEED                                 ; 5           ; Untyped                                       ;
-; DEVICE_FAMILY                                  ; Cyclone III ; Untyped                                       ;
-; CARRY_CHAIN                                    ; MANUAL      ; Untyped                                       ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K                           ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped                                       ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped                                       ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped                                       ;
-; CBXI_PARAMETER                                 ; NOTHING     ; Untyped                                       ;
-; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped                                       ;
-; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped                                       ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped                                       ;
-+------------------------------------------------+-------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1 ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                ;
-+------------------------+----------------+---------------------------------------------------------------------+
-; LPM_WIDTHN             ; 24             ; Untyped                                                             ;
-; LPM_WIDTHD             ; 12             ; Untyped                                                             ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                             ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                             ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                             ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                             ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                             ;
-; CBXI_PARAMETER         ; lpm_divide_7jm ; Untyped                                                             ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                             ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                             ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                      ;
-+------------------------+----------------+---------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                                      ;
-+---------------------------------------+-------------------------------------------------------------+
-; Name                                  ; Value                                                       ;
-+---------------------------------------+-------------------------------------------------------------+
-; Number of entity instances            ; 1                                                           ;
-; Entity Instance                       ; ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 12                                                          ;
-;     -- LPM_WIDTHB                     ; 12                                                          ;
-;     -- LPM_WIDTHP                     ; 24                                                          ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                    ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                          ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                         ;
-;     -- USE_EAB                        ; OFF                                                         ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                        ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                          ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                          ;
-+---------------------------------------+-------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                       ;
++---------------------------------------+--------------------------------------------------------------+
+; Name                                  ; Value                                                        ;
++---------------------------------------+--------------------------------------------------------------+
+; Number of entity instances            ; 1                                                            ;
+; Entity Instance                       ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 12                                                           ;
+;     -- LPM_WIDTHB                     ; 12                                                           ;
+;     -- LPM_WIDTHP                     ; 24                                                           ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                     ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                           ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                          ;
+;     -- USE_EAB                        ; OFF                                                          ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                         ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                           ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                           ;
++---------------------------------------+--------------------------------------------------------------+
 
 
 +------------------------------------------------------------------+
@@ -852,7 +852,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:16     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -862,7 +862,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 24 16:29:49 2017
+    Info: Processing started: Wed May 24 16:41:56 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Oscilloscope -c Oscilloscope
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file lcd16x2_ctrl.vhd
@@ -886,15 +886,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file lcd16x2
 Info (12021): Found 2 design units, including 1 entities, in source file ctrl_spi_tx.vhd
     Info (12022): Found design unit 1: ctrl_spi_tx-behave
     Info (12023): Found entity 1: ctrl_spi_tx
-Info (12021): Found 2 design units, including 1 entities, in source file controller_spi_tx.vhd
-    Info (12022): Found design unit 1: controller_Spi_tx-behave
-    Info (12023): Found entity 1: controller_Spi_tx
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
     Info (12022): Found design unit 1: Control-behave
     Info (12023): Found entity 1: Control
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl_oscilloscope.vhd
     Info (12022): Found design unit 1: VHDL_Oscilloscope-behave
     Info (12023): Found entity 1: VHDL_Oscilloscope
+Info (12021): Found 2 design units, including 1 entities, in source file send_voltage_value.vhd
+    Info (12022): Found design unit 1: send_voltage_value-behave
+    Info (12023): Found entity 1: send_voltage_value
 Info (12127): Elaborating entity "VHDL_Oscilloscope" for the top level hierarchy
 Info (12128): Elaborating entity "LCD_Control" for hierarchy "LCD_Control:CtrlLcdRx"
 Warning (10541): VHDL Signal Declaration warning at LCD_Control.vhd(53): used implicit default value for signal "signal_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
@@ -906,16 +906,16 @@ Info (12128): Elaborating entity "ctrl_spi_tx" for hierarchy "ctrl_spi_tx:CtrlSp
 Warning (10540): VHDL Signal Declaration warning at ctrl_spi_tx.vhd(70): used explicit default value for signal "HOLD_SS_N" because signal was never assigned a value
 Info (12128): Elaborating entity "SPI_master" for hierarchy "ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI"
 Info (12128): Elaborating entity "rs232_tx" for hierarchy "ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX"
-Info (12128): Elaborating entity "controller_Spi_tx" for hierarchy "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl"
+Info (12128): Elaborating entity "send_voltage_value" for hierarchy "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl"
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Mod1"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Div2"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Mod0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Div0"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Mult0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|Div1"
-Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1"
-Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Mod1" with the following parameter:
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Div0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Mult0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Div1"
+Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1"
+Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -933,8 +933,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_vnc
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_9v9.tdf
     Info (12023): Found entity 1: lpm_abs_9v9
-Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2"
-Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2"
+Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -948,8 +948,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_36f
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_st9.tdf
     Info (12023): Found entity 1: lpm_abs_st9
-Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0"
-Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "12"
     Info (12134): Parameter "LPM_WIDTHB" = "12"
     Info (12134): Parameter "LPM_WIDTHP" = "24"
@@ -959,18 +959,18 @@ Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_gfh.tdf
     Info (12023): Found entity 1: add_sub_gfh
-Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_bfh.tdf
     Info (12023): Found entity 1: add_sub_bfh
-Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_mult:Mult0"
-Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1"
-Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div1" with the following parameter:
+Info (12131): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0"
+Info (12130): Elaborated megafunction instantiation "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1"
+Info (12133): Instantiated megafunction "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "24"
     Info (12134): Parameter "LPM_WIDTHD" = "12"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -987,8 +987,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD_RW" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_25_result_int[1]~16"
-    Info (17048): Logic cell "ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_25_result_int[1]~16"
+    Info (17048): Logic cell "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_25_result_int[1]~16"
+    Info (17048): Logic cell "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_25_result_int[1]~16"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 2485 device resources after synthesis - the final resource count might be different
@@ -996,9 +996,9 @@ Info (21057): Implemented 2485 device resources after synthesis - the final reso
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 2470 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 625 megabytes
-    Info: Processing ended: Wed May 24 16:30:18 2017
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 640 megabytes
+    Info: Processing ended: Wed May 24 16:42:10 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:11
 
 

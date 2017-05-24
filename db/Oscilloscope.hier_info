@@ -876,12 +876,12 @@ rx => baudrate_counter.OUTPUTSELECT
 |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx
 CLK => SPI_master:SPI.CLK
 CLK => rs232_tx:rsTX.clk_i
-CLK => controller_Spi_tx:Ctrl.CLK
+CLK => send_voltage_value:Ctrl.CLK
 RST_N => SPI_master:SPI.RST_N
 RST_N => rs232_tx:rsTX.rst_i
-RST_N => controller_Spi_tx:Ctrl.RST_N
-MODE[0] => controller_Spi_tx:Ctrl.MODE[0]
-MODE[1] => controller_Spi_tx:Ctrl.MODE[1]
+RST_N => send_voltage_value:Ctrl.RST_N
+MODE[0] => send_voltage_value:Ctrl.MODE[0]
+MODE[1] => send_voltage_value:Ctrl.MODE[1]
 tx <= rs232_tx:rsTX.tx
 SPI_SCK <= SPI_master:SPI.SPI_SCK
 SPI_MOSI <= SPI_master:SPI.SPI_MOSI
@@ -1119,7 +1119,7 @@ data_i[7] => shift_reg.DATAB
 tx <= tx~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|controller_Spi_tx:Ctrl
+|VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl
 CLK => voltage_data2[0].CLK
 CLK => voltage_data2[1].CLK
 CLK => voltage_data2[2].CLK

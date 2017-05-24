@@ -48,7 +48,7 @@ component rs232_tx is
     tx     : out std_logic ); 	-- Tx output 
 end component;
 
-component controller_Spi_tx is
+component send_voltage_value is
 port(
 	CLK, RST_N : in std_logic;
 	--RX
@@ -80,7 +80,7 @@ end component;
 			port map(CLK, RST_N, START, HOLD_SS_N, WDATA, RDATA, DONE, SPI_SCK, SPI_MOSI, SPI_MISO, SPI_SS_N);
 		rsTX:rs232_tx
 			port map(CLK, RST_N, request, ack, data_to_tx, to_tx);
-		Ctrl:controller_Spi_tx
+		Ctrl:send_voltage_value
 			port map(CLK, RST_N, MODE, RDATA, WDATA, START, DONE, data_to_tx, request, ack);
 		tx<=to_tx;
 		--SHOW2 <= to_tx;
