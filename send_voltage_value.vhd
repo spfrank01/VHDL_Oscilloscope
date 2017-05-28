@@ -17,7 +17,6 @@ port(
 	
 	--TX
 	data_to_tx : out std_logic_vector(7 downto 0);
-	--check : out std_logic_vector(7 downto 0);
 	request_tx : out std_logic:='0';
 	ack_form_tx : in std_logic);
 end send_voltage_value;
@@ -27,13 +26,13 @@ architecture behave of send_voltage_value is
 constant SEND_PER_SEC : integer := 6250;
 signal MAX_COUNTER : integer := 50e6/SEND_PER_SEC;
 
-constant VOLTAGE_REFER : integer := 3300;
+constant VOLTAGE_REFER : integer := 3300;  -- 3.3V
 
    type state_type is (
         WAIT_TIME_REQ,	-- Default state
 		  
 		  --MODE SINGLE
-		  REQ_VOLTAGE_SINGLE,
+		  REQ_VOLTAGE_SINGLE,		-- Request Voltage from SPI
 		  WAIT_DONE_SINGLE,
 		  
 		  SEND_MODE_SINGLE,
@@ -45,9 +44,9 @@ constant VOLTAGE_REFER : integer := 3300;
 		  WAIT_SEND_VOLTAGE_PART2_SINGLE,
 		  
 		  --MODE DUAL
-		  REQ_VOLTAGE_CH1_DUAL,
+		  REQ_VOLTAGE_CH1_DUAL,		-- Request Voltage from SPI CH1
 		  WAIT_DONE_CH1_DUAL,
-		  REQ_VOLTAGE_CH2_DUAL,
+		  REQ_VOLTAGE_CH2_DUAL,		-- Request Voltage from SPI CH2
 		  WAIT_DONE_CH2_DUAL,
 		  
 		  SEND_MODE_DUAL,
@@ -75,13 +74,13 @@ process(CLK) begin
 		count_time <= count_time + 1; 
 		
 		case state is		
-			when WAIT_TIME_REQ =>
+			when WAIT_TIME_REQ =>		-- Default state
 				request_tx <= '1';
 				START <= '0';
-				mode_buffer <= MODE;  -- update MODE_buffer
+				mode_buffer <= MODE;  	-- update MODE_buffer
 				
 				if count_time > MAX_COUNTER then				
-					count_time <= 0;
+					count_time <= 0;		-- reset count_time
 				
 					-- IF Single mode
 					if mode_buffer = "01" or mode_buffer = "10" then
@@ -96,7 +95,7 @@ process(CLK) begin
 ----------------------------------------------------------------------------------------	
 ----------------------------------------------------------------------------------------	
 		  --MODE SINGLE
-			when REQ_VOLTAGE_SINGLE =>
+			when REQ_VOLTAGE_SINGLE =>		-- Request Voltage from SPI
 				START <= '1';
 				if MODE = "01" then
 					MOSI <= "1101";
@@ -113,7 +112,7 @@ process(CLK) begin
 				end if;
 				
 ----------------------------------------------------------------------------------------	
-			when SEND_MODE_SINGLE =>
+			when SEND_MODE_SINGLE =>					--TX send MODE 01 ro 10 
 				data_to_tx <= "100000" & mode_buffer;
 				request_tx <= '0';
 				state <= WAIT_SEND_MODE_SINGLE;
@@ -124,7 +123,7 @@ process(CLK) begin
 					state <= SEND_VOLTAGE_PART1_SINGLE;
 				end if;
 			---------------------------------
-			when SEND_VOLTAGE_PART1_SINGLE =>
+			when SEND_VOLTAGE_PART1_SINGLE =>			--TX send voltage value 
 				data_to_tx <= std_logic_vector(to_unsigned(voltage_data/100, 8));	
 				request_tx <= '0';
 				state <= WAIT_SEND_VOLTAGE_PART1_SINGLE;
@@ -149,21 +148,21 @@ process(CLK) begin
 ----------------------------------------------------------------------------------------	
 ----------------------------------------------------------------------------------------
 			--MODE DUAL
-			when REQ_VOLTAGE_CH1_DUAL =>		-- Request Voltage from SPI
+			when REQ_VOLTAGE_CH1_DUAL =>		-- Request Voltage from SPI CH1
 				MOSI <= "1101";
 				START <= '1';
 				if DONE = '0' then
 					state <= WAIT_DONE_CH1_DUAL;
 				end if;
 				
-			when WAIT_DONE_CH1_DUAL =>			-- 
+			when WAIT_DONE_CH1_DUAL =>			
 				START <= '0';
 				if DONE = '1' then
 					voltage_data <= to_integer(unsigned(voltage_in)) * VOLTAGE_REFER / 4095;
 					state <= REQ_VOLTAGE_CH2_DUAL;
 				end if;
-				
-			when REQ_VOLTAGE_CH2_DUAL =>
+			--
+			when REQ_VOLTAGE_CH2_DUAL =>		-- Request Voltage from SPI CH2
 				MOSI <= "1111";
 				START <= '1';
 				if DONE = '0' then
@@ -177,7 +176,7 @@ process(CLK) begin
 				end if;
 				
 ----------------------------------------------------------------------------------------
-			when SEND_MODE_DUAL =>
+			when SEND_MODE_DUAL =>						--TX send MODE DUAL
 				data_to_tx <= "100000" & mode_buffer;
 				request_tx <= '0';
 				state <= WAIT_SEND_MODE_DUAL;
@@ -189,7 +188,7 @@ process(CLK) begin
 				end if;
 		  
 ----------------------------------------------------------------------------------------
-			when SEND_VOLTAGE_CH1_PART1_DUAL =>
+			when SEND_VOLTAGE_CH1_PART1_DUAL =>			--TX send voltage value CH1 
 				data_to_tx <= std_logic_vector(to_unsigned(voltage_data/100, 8));	
 				request_tx <= '0';
 				state <= WAIT_SEND_VOLTAGE_CH1_PART1_DUAL;
@@ -199,7 +198,7 @@ process(CLK) begin
 				if ack_form_tx = '1' then
 					state <= SEND_VOLTAGE_CH1_PART2_DUAL;	
 				end if;
-				
+			--
 			when SEND_VOLTAGE_CH1_PART2_DUAL =>
 				data_to_tx <= std_logic_vector(to_unsigned(voltage_data mod 100, 8));	
 				request_tx <= '0';
@@ -212,7 +211,7 @@ process(CLK) begin
 				end if;
 		  
 ----------------------------------------------------------------------------------------
-			when SEND_VOLTAGE_CH2_PART1_DUAL =>
+			when SEND_VOLTAGE_CH2_PART1_DUAL =>			--TX send voltage value CH2
 				data_to_tx <= std_logic_vector(to_unsigned(voltage_data2/100, 8));	
 				request_tx <= '0';
 				state <= WAIT_SEND_VOLTAGE_CH2_PART1_DUAL;
@@ -222,7 +221,7 @@ process(CLK) begin
 				if ack_form_tx = '1' then
 					state <= SEND_VOLTAGE_CH2_PART2_DUAL;	
 				end if;
-				
+			--
 			when SEND_VOLTAGE_CH2_PART2_DUAL =>
 				data_to_tx <= std_logic_vector(to_unsigned(voltage_data2 mod 100, 8));	
 				request_tx <= '0';

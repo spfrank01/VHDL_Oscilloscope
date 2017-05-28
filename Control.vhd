@@ -45,19 +45,19 @@ architecture behave of Control is
 					when check_mode_bit =>
 					
 						if req_i = '0' then
-							 if DATA_IN = x"30" then  -- 1 ascii
+							 if DATA_IN = x"30" then  		-- 0 in Ascii
 								 mode_data <= "00";
 								 state <= check_start_bit;
 								 
-							 elsif DATA_IN = x"31" then
+							 elsif DATA_IN = x"31" then	-- 1 in Ascii
 								 mode_data <= "01";
 							    state <= check_start_bit;
 								 
-							 elsif DATA_IN = x"32" then
+							 elsif DATA_IN = x"32" then	-- 2 in Ascii
 							    mode_data <= "10";
 							    state <= check_start_bit;
 								 
-							 elsif DATA_IN = x"33" then
+							 elsif DATA_IN = x"33" then	-- 3 in Ascii
 							    mode_data <= "11";
 							    state <= check_start_bit;
 							 end if;
