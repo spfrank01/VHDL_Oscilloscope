@@ -1,5 +1,5 @@
 Fitter report for Oscilloscope
-Wed May 24 16:42:37 2017
+Sun May 28 21:26:59 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -68,17 +68,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 24 16:42:36 2017      ;
+; Fitter Status                      ; Successful - Sun May 28 21:26:59 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Oscilloscope                               ;
 ; Top-level Entity Name              ; VHDL_Oscilloscope                          ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C10E144C8                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,451 / 10,320 ( 24 % )                    ;
-;     Total combinational functions  ; 2,431 / 10,320 ( 24 % )                    ;
-;     Dedicated logic registers      ; 323 / 10,320 ( 3 % )                       ;
-; Total registers                    ; 323                                        ;
+; Total logic elements               ; 2,442 / 10,320 ( 24 % )                    ;
+;     Total combinational functions  ; 2,421 / 10,320 ( 23 % )                    ;
+;     Dedicated logic registers      ; 319 / 10,320 ( 3 % )                       ;
+; Total registers                    ; 319                                        ;
 ; Total pins                         ; 15 / 95 ( 16 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                        ;
@@ -156,12 +156,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.30        ;
+; Average used               ; 1.28        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  30.4%      ;
+;     Processor 2            ;  28.2%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -191,8 +191,8 @@ applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 2797 ) ; 0.00 % ( 0 / 2797 )        ; 0.00 % ( 0 / 2797 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 2797 ) ; 0.00 % ( 0 / 2797 )        ; 0.00 % ( 0 / 2797 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 2783 ) ; 0.00 % ( 0 / 2783 )        ; 0.00 % ( 0 / 2783 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 2783 ) ; 0.00 % ( 0 / 2783 )        ; 0.00 % ( 0 / 2783 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -215,7 +215,7 @@ applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 2787 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 2773 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -231,26 +231,26 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 2,451 / 10,320 ( 24 % ) ;
-;     -- Combinational with no register       ; 2128                    ;
-;     -- Register only                        ; 20                      ;
-;     -- Combinational with a register        ; 303                     ;
+; Total logic elements                        ; 2,442 / 10,320 ( 24 % ) ;
+;     -- Combinational with no register       ; 2123                    ;
+;     -- Register only                        ; 21                      ;
+;     -- Combinational with a register        ; 298                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 705                     ;
-;     -- 3 input functions                    ; 659                     ;
-;     -- <=2 input functions                  ; 1067                    ;
-;     -- Register only                        ; 20                      ;
+;     -- 4 input functions                    ; 703                     ;
+;     -- 3 input functions                    ; 650                     ;
+;     -- <=2 input functions                  ; 1068                    ;
+;     -- Register only                        ; 21                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 1655                    ;
-;     -- arithmetic mode                      ; 776                     ;
+;     -- normal mode                          ; 1649                    ;
+;     -- arithmetic mode                      ; 772                     ;
 ;                                             ;                         ;
-; Total registers*                            ; 323 / 10,744 ( 3 % )    ;
-;     -- Dedicated logic registers            ; 323 / 10,320 ( 3 % )    ;
+; Total registers*                            ; 319 / 10,744 ( 3 % )    ;
+;     -- Dedicated logic registers            ; 319 / 10,320 ( 3 % )    ;
 ;     -- I/O registers                        ; 0 / 424 ( 0 % )         ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 188 / 645 ( 29 % )      ;
+; Total LABs:  partially or completely used   ; 186 / 645 ( 29 % )      ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 15 / 95 ( 16 % )        ;
 ;     -- Clock pins                           ; 2 / 4 ( 50 % )          ;
@@ -268,10 +268,10 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 4% / 4% / 5%            ;
-; Peak interconnect usage (total/H/V)         ; 10% / 8% / 12%          ;
-; Maximum fan-out                             ; 323                     ;
+; Peak interconnect usage (total/H/V)         ; 9% / 9% / 8%            ;
+; Maximum fan-out                             ; 319                     ;
 ; Highest non-global fan-out                  ; 86                      ;
-; Total fan-out                               ; 7768                    ;
+; Total fan-out                               ; 7723                    ;
 ; Average fan-out                             ; 2.76                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -285,26 +285,26 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 2451 / 10320 ( 24 % ) ; 0 / 10320 ( 0 % )              ;
-;     -- Combinational with no register       ; 2128                  ; 0                              ;
-;     -- Register only                        ; 20                    ; 0                              ;
-;     -- Combinational with a register        ; 303                   ; 0                              ;
+; Total logic elements                        ; 2442 / 10320 ( 24 % ) ; 0 / 10320 ( 0 % )              ;
+;     -- Combinational with no register       ; 2123                  ; 0                              ;
+;     -- Register only                        ; 21                    ; 0                              ;
+;     -- Combinational with a register        ; 298                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 705                   ; 0                              ;
-;     -- 3 input functions                    ; 659                   ; 0                              ;
-;     -- <=2 input functions                  ; 1067                  ; 0                              ;
-;     -- Register only                        ; 20                    ; 0                              ;
+;     -- 4 input functions                    ; 703                   ; 0                              ;
+;     -- 3 input functions                    ; 650                   ; 0                              ;
+;     -- <=2 input functions                  ; 1068                  ; 0                              ;
+;     -- Register only                        ; 21                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 1655                  ; 0                              ;
-;     -- arithmetic mode                      ; 776                   ; 0                              ;
+;     -- normal mode                          ; 1649                  ; 0                              ;
+;     -- arithmetic mode                      ; 772                   ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 323                   ; 0                              ;
-;     -- Dedicated logic registers            ; 323 / 10320 ( 3 % )   ; 0 / 10320 ( 0 % )              ;
+; Total registers                             ; 319                   ; 0                              ;
+;     -- Dedicated logic registers            ; 319 / 10320 ( 3 % )   ; 0 / 10320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 188 / 645 ( 29 % )    ; 0 / 645 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 186 / 645 ( 29 % )    ; 0 / 645 ( 0 % )                ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 15                    ; 0                              ;
@@ -320,8 +320,8 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 7763                  ; 5                              ;
-;     -- Registered Connections               ; 1430                  ; 0                              ;
+;     -- Total Connections                    ; 7718                  ; 5                              ;
+;     -- Registered Connections               ; 1412                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -353,10 +353,10 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; CLK      ; 22    ; 1        ; 0            ; 11           ; 0            ; 323                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; CLK      ; 22    ; 1        ; 0            ; 11           ; 0            ; 319                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; RST_N    ; 89    ; 5        ; 34           ; 12           ; 14           ; 68                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; SPI_MISO ; 84    ; 5        ; 34           ; 9            ; 14           ; 12                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; rx       ; 2     ; 1        ; 0            ; 23           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; SPI_MISO ; 86    ; 5        ; 34           ; 9            ; 0            ; 12                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; rx       ; 2     ; 1        ; 0            ; 23           ; 7            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -372,9 +372,9 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 ; LCD_E     ; 54    ; 4        ; 18           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LCD_RS    ; 52    ; 3        ; 16           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; LCD_RW    ; 53    ; 3        ; 16           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; SPI_MOSI  ; 86    ; 5        ; 34           ; 9            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; SPI_SCK   ; 80    ; 5        ; 34           ; 7            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
-; SPI_SS_N  ; 99    ; 6        ; 34           ; 17           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; SPI_MOSI  ; 84    ; 5        ; 34           ; 9            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; SPI_SCK   ; 99    ; 6        ; 34           ; 17           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; SPI_SS_N  ; 80    ; 5        ; 34           ; 7            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 ; tx        ; 1     ; 1        ; 0            ; 23           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
@@ -391,13 +391,13 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 ; 13       ; DATA0                       ; As input tri-stated      ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
 ; 14       ; nCONFIG                     ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 21       ; nCE                         ; -                        ; -                       ; Dedicated Programming Pin ;
-; 86       ; DIFFIO_R7n, DEV_OE          ; Use as regular IO        ; SPI_MOSI                ; Dual Purpose Pin          ;
+; 86       ; DIFFIO_R7n, DEV_OE          ; Use as regular IO        ; SPI_MISO                ; Dual Purpose Pin          ;
 ; 92       ; CONF_DONE                   ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 94       ; MSEL0                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 96       ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 97       ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 97       ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
-; 99       ; DIFFIO_R4p, CRC_ERROR       ; Use as regular IO        ; SPI_SS_N                ; Dual Purpose Pin          ;
+; 99       ; DIFFIO_R4p, CRC_ERROR       ; Use as regular IO        ; SPI_SCK                 ; Dual Purpose Pin          ;
 ; 101      ; DIFFIO_R3n, nCEO            ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
@@ -502,13 +502,13 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 ; 77       ; 107        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 78       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 79       ; 111        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 80       ; 113        ; 5        ; SPI_SCK                                                   ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 80       ; 113        ; 5        ; SPI_SS_N                                                  ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 81       ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 82       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 83       ; 117        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 84       ; 118        ; 5        ; SPI_MISO                                                  ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 84       ; 118        ; 5        ; SPI_MOSI                                                  ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 85       ; 119        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 86       ; 120        ; 5        ; SPI_MOSI                                                  ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 86       ; 120        ; 5        ; SPI_MISO                                                  ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 87       ; 121        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 88       ; 125        ; 5        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 89       ; 126        ; 5        ; RST_N                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -522,7 +522,7 @@ The pin-out file can be found in C:/altera/13.1/hl_MiniProject/Oscilloscope/outp
 ; 97       ; 132        ; 6        ; ^MSEL2                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 97       ; 133        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 98       ; 136        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 99       ; 137        ; 6        ; SPI_SS_N                                                  ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 99       ; 137        ; 6        ; SPI_SCK                                                   ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 100      ; 138        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 101      ; 139        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 102      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -578,16 +578,16 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                                     ; Library Name ;
 +------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |VHDL_Oscilloscope                                   ; 2451 (1)    ; 323 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 15   ; 0            ; 2128 (1)     ; 20 (0)            ; 303 (0)          ; |VHDL_Oscilloscope                                                                                                                                                                      ; work         ;
-;    |LCD_Control:CtrlLcdRx|                           ; 370 (0)     ; 150 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 220 (0)      ; 13 (0)            ; 137 (0)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx                                                                                                                                                ; work         ;
+; |VHDL_Oscilloscope                                   ; 2442 (1)    ; 319 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 15   ; 0            ; 2123 (1)     ; 21 (0)            ; 298 (0)          ; |VHDL_Oscilloscope                                                                                                                                                                      ; work         ;
+;    |LCD_Control:CtrlLcdRx|                           ; 364 (0)     ; 148 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 216 (0)      ; 13 (0)            ; 135 (0)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx                                                                                                                                                ; work         ;
 ;       |Control:U0|                                   ; 55 (55)     ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 37 (37)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0                                                                                                                                     ; work         ;
-;       |lcd16x2_ctrl_demo3:U1|                        ; 251 (68)    ; 81 (40)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 170 (28)     ; 6 (6)             ; 75 (31)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1                                                                                                                          ; work         ;
-;          |lcd16x2_ctrl:DUT|                          ; 186 (186)   ; 41 (41)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 142 (142)    ; 0 (0)             ; 44 (44)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT                                                                                                         ; work         ;
-;       |rs232_rx:U2|                                  ; 65 (65)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 7 (7)             ; 26 (26)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2                                                                                                                                    ; work         ;
-;    |ctrl_spi_tx:CtrlSpiTx|                           ; 2080 (0)    ; 173 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1907 (0)     ; 7 (0)             ; 166 (0)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx                                                                                                                                                ; work         ;
-;       |SPI_master:SPI|                               ; 79 (79)     ; 53 (53)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 4 (4)             ; 49 (49)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI                                                                                                                                 ; work         ;
-;       |rs232_tx:rsTX|                                ; 51 (51)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 1 (1)             ; 25 (25)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX                                                                                                                                  ; work         ;
-;       |send_voltage_value:Ctrl|                      ; 1954 (171)  ; 94 (94)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1856 (80)    ; 2 (2)             ; 96 (83)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl                                                                                                                        ; work         ;
+;       |lcd16x2_ctrl_demo3:U1|                        ; 251 (67)    ; 81 (40)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 170 (27)     ; 6 (6)             ; 75 (32)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1                                                                                                                          ; work         ;
+;          |lcd16x2_ctrl:DUT|                          ; 186 (186)   ; 41 (41)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 143 (143)    ; 0 (0)             ; 43 (43)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT                                                                                                         ; work         ;
+;       |rs232_rx:U2|                                  ; 59 (59)     ; 31 (31)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 7 (7)             ; 24 (24)          ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2                                                                                                                                    ; work         ;
+;    |ctrl_spi_tx:CtrlSpiTx|                           ; 2077 (0)    ; 171 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1906 (0)     ; 8 (0)             ; 163 (0)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx                                                                                                                                                ; work         ;
+;       |SPI_master:SPI|                               ; 82 (82)     ; 53 (53)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 6 (6)             ; 47 (47)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI                                                                                                                                 ; work         ;
+;       |rs232_tx:rsTX|                                ; 47 (47)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 1 (1)             ; 23 (23)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX                                                                                                                                  ; work         ;
+;       |send_voltage_value:Ctrl|                      ; 1953 (170)  ; 94 (94)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1854 (79)    ; 1 (1)             ; 98 (84)          ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl                                                                                                                        ; work         ;
 ;          |lpm_divide:Div0|                           ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0                                                                                                        ; work         ;
 ;             |lpm_divide_jvo:auto_generated|          ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated                                                                          ; work         ;
 ;                |abs_divider_nbg:divider|             ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
@@ -596,20 +596,20 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;             |lpm_divide_7jm:auto_generated|          ; 402 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 402 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated                                                                          ; work         ;
 ;                |sign_div_unsign_8nh:divider|         ; 402 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 402 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider                                              ; work         ;
 ;                   |alt_u_div_s8f:divider|            ; 402 (402)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 402 (402)    ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider                        ; work         ;
-;          |lpm_divide:Div2|                           ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2                                                                                                        ; work         ;
-;             |lpm_divide_jvo:auto_generated|          ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated                                                                          ; work         ;
-;                |abs_divider_nbg:divider|             ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
-;                   |alt_u_div_36f:divider|            ; 154 (154)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (154)    ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider                            ; work         ;
-;          |lpm_divide:Mod0|                           ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 504 (0)      ; 0 (0)             ; 5 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0                                                                                                        ; work         ;
-;             |lpm_divide_3po:auto_generated|          ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 504 (0)      ; 0 (0)             ; 5 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                                          ; work         ;
-;                |abs_divider_4dg:divider|             ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 504 (0)      ; 0 (0)             ; 5 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                                  ; work         ;
-;                   |alt_u_div_t8f:divider|            ; 509 (509)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 504 (504)    ; 0 (0)             ; 5 (5)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                            ; work         ;
+;          |lpm_divide:Div2|                           ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 153 (0)      ; 0 (0)             ; 1 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2                                                                                                        ; work         ;
+;             |lpm_divide_jvo:auto_generated|          ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 153 (0)      ; 0 (0)             ; 1 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated                                                                          ; work         ;
+;                |abs_divider_nbg:divider|             ; 154 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 153 (0)      ; 0 (0)             ; 1 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
+;                   |alt_u_div_36f:divider|            ; 154 (154)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 153 (153)    ; 0 (0)             ; 1 (1)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider                            ; work         ;
+;          |lpm_divide:Mod0|                           ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (0)      ; 0 (0)             ; 4 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0                                                                                                        ; work         ;
+;             |lpm_divide_3po:auto_generated|          ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (0)      ; 0 (0)             ; 4 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                                          ; work         ;
+;                |abs_divider_4dg:divider|             ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (0)      ; 0 (0)             ; 4 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                                  ; work         ;
+;                   |alt_u_div_t8f:divider|            ; 509 (509)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (505)    ; 0 (0)             ; 4 (4)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                            ; work         ;
 ;          |lpm_divide:Mod1|                           ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (0)      ; 0 (0)             ; 4 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1                                                                                                        ; work         ;
 ;             |lpm_divide_3po:auto_generated|          ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (0)      ; 0 (0)             ; 4 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                                          ; work         ;
 ;                |abs_divider_4dg:divider|             ; 509 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (0)      ; 0 (0)             ; 4 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                                  ; work         ;
 ;                   |alt_u_div_t8f:divider|            ; 509 (509)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 505 (505)    ; 0 (0)             ; 4 (4)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                            ; work         ;
-;          |lpm_mult:Mult0|                            ; 61 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 57 (0)       ; 0 (0)             ; 4 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0                                                                                                         ; work         ;
-;             |multcore:mult_core|                     ; 61 (33)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 57 (29)      ; 0 (0)             ; 4 (4)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
+;          |lpm_mult:Mult0|                            ; 61 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (0)       ; 0 (0)             ; 5 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0                                                                                                         ; work         ;
+;             |multcore:mult_core|                     ; 61 (33)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (28)      ; 0 (0)             ; 5 (5)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
 ;                |mpar_add:padder|                     ; 28 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
 ;                   |lpm_add_sub:adder[0]|             ; 14 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
 ;                      |add_sub_gfh:auto_generated|    ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gfh:auto_generated                      ; work         ;
@@ -638,8 +638,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SPI_SS_N  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; CLK       ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; RST_N     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; rx        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SPI_MISO  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; rx        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SPI_MISO  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -651,26 +651,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLK                                                               ;                   ;         ;
 ; RST_N                                                             ;                   ;         ;
 ; rx                                                                ;                   ;         ;
-;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]~1              ; 1                 ; 6       ;
-;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|Selector0~1              ; 1                 ; 6       ;
-;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|state~12                 ; 1                 ; 6       ;
-;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]~3    ; 1                 ; 6       ;
-;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|state~15                 ; 1                 ; 6       ;
-;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|state~18                 ; 1                 ; 6       ;
-;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[7]~feeder ; 1                 ; 6       ;
+;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[6]~1              ; 0                 ; 6       ;
+;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|Selector0~1              ; 0                 ; 6       ;
+;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|state~12                 ; 0                 ; 6       ;
+;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]~3    ; 0                 ; 6       ;
+;      - LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[7]~feeder ; 0                 ; 6       ;
 ; SPI_MISO                                                          ;                   ;         ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[11]~0            ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[10]~1            ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[9]~2             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[8]~3             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[7]~4             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[6]~5             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[5]~6             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[4]~7             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[3]~8             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[2]~9             ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[1]~10            ; 0                 ; 6       ;
-;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[0]~11            ; 0                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[11]~0            ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[10]~1            ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[9]~2             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[8]~3             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[7]~4             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[6]~5             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[5]~6             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[4]~7             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[3]~8             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[2]~9             ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[1]~10            ; 1                 ; 6       ;
+;      - ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[0]~11            ; 1                 ; 6       ;
 +-------------------------------------------------------------------+-------------------+---------+
 
 
@@ -679,32 +677,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                     ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; CLK                                                                      ; PIN_22             ; 323     ; Clock                     ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; LCD_Control:CtrlLcdRx|Control:U0|count[10]~88                            ; LCCOMB_X13_Y19_N2  ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|Control:U0|count[31]~89                            ; LCCOMB_X13_Y19_N12 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|Control:U0|mode_data[1]~2                          ; LCCOMB_X13_Y19_N16 ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|Control:U0|sleep                                   ; FF_X14_Y17_N29     ; 13      ; Sync. clear, Sync. load   ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|Equal0~8                     ; LCCOMB_X30_Y9_N24  ; 28      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state~13 ; LCCOMB_X10_Y15_N20 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|ptr[3]~0    ; LCCOMB_X13_Y14_N20 ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|state.RESET ; FF_X13_Y14_N5      ; 38      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]~3                  ; LCCOMB_X17_Y19_N12 ; 9       ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]~1                            ; LCCOMB_X17_Y19_N26 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[0]~0                    ; LCCOMB_X16_Y19_N10 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CLK                                                                      ; PIN_22             ; 319     ; Clock                     ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; LCD_Control:CtrlLcdRx|Control:U0|count[27]~88                            ; LCCOMB_X32_Y10_N30 ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|Control:U0|count[31]~89                            ; LCCOMB_X32_Y10_N20 ; 32      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|Control:U0|mode_data[1]~2                          ; LCCOMB_X31_Y11_N0  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|Control:U0|sleep                                   ; FF_X32_Y10_N5      ; 13      ; Sync. clear, Sync. load   ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|Equal0~8                     ; LCCOMB_X32_Y4_N30  ; 28      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state~13 ; LCCOMB_X26_Y5_N20  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|ptr[1]~0    ; LCCOMB_X26_Y4_N24  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|state.RESET ; FF_X26_Y4_N13      ; 38      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]~3                  ; LCCOMB_X30_Y12_N28 ; 7       ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[6]~1                            ; LCCOMB_X30_Y12_N8  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[0]~0                    ; LCCOMB_X31_Y12_N4  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; RST_N                                                                    ; PIN_89             ; 43      ; Clock enable, Sync. load  ; no     ; --                   ; --               ; --                        ;
 ; RST_N                                                                    ; PIN_89             ; 26      ; Async. clear              ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|Equal0~1                            ; LCCOMB_X22_Y18_N6  ; 16      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S8                            ; FF_X25_Y18_N31     ; 17      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[0]~10                    ; LCCOMB_X25_Y18_N10 ; 7       ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[6]~11                    ; LCCOMB_X24_Y18_N4  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~15               ; LCCOMB_X14_Y11_N4  ; 9       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[3]~32               ; LCCOMB_X14_Y11_N10 ; 9       ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[0]~6                       ; LCCOMB_X17_Y11_N4  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~14               ; LCCOMB_X16_Y12_N24 ; 14      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~8                ; LCCOMB_X16_Y14_N10 ; 34      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|WideOr2~0                  ; LCCOMB_X17_Y11_N16 ; 9       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_TIME_REQ        ; FF_X16_Y14_N13     ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[2]~0          ; LCCOMB_X16_Y12_N10 ; 13      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|Equal0~1                            ; LCCOMB_X13_Y12_N10 ; 16      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S8                            ; FF_X12_Y11_N15     ; 17      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[0]~10                    ; LCCOMB_X12_Y12_N16 ; 7       ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[6]~11                    ; LCCOMB_X13_Y11_N14 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~12               ; LCCOMB_X17_Y10_N16 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~25               ; LCCOMB_X17_Y10_N18 ; 7       ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[0]~6                       ; LCCOMB_X17_Y6_N20  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~11               ; LCCOMB_X19_Y9_N30  ; 34      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~14               ; LCCOMB_X19_Y11_N6  ; 14      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|WideOr2~0                  ; LCCOMB_X17_Y9_N8   ; 9       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_TIME_REQ        ; FF_X19_Y9_N29      ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[18]~0         ; LCCOMB_X19_Y11_N20 ; 13      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -713,7 +711,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLK   ; PIN_22   ; 323     ; 12                                   ; Global Clock         ; GCLK4            ; --                        ;
+; CLK   ; PIN_22   ; 319     ; 13                                   ; Global Clock         ; GCLK4            ; --                        ;
 ; RST_N ; PIN_89   ; 26      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -748,9 +746,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|op_4~26                        ; 37      ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|op_3~26                        ; 37      ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|op_2~24                        ; 37      ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~8                                                                                                                    ; 34      ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~11                                                                                                                   ; 34      ;
 ; LCD_Control:CtrlLcdRx|Control:U0|count[31]~89                                                                                                                                ; 32      ;
-; LCD_Control:CtrlLcdRx|Control:U0|count[10]~88                                                                                                                                ; 32      ;
+; LCD_Control:CtrlLcdRx|Control:U0|count[27]~88                                                                                                                                ; 32      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|ptr[2]                                                                                                          ; 30      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|Equal0~8                                                                                                                         ; 28      ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|op_12~26                       ; 27      ;
@@ -766,7 +764,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_25_result_int[9]~14        ; 22      ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_25_result_int[9]~14        ; 22      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.DONE                                                                                                   ; 19      ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|ack_o                                                                                                                                    ; 18      ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|ack_o                                                                                                                                    ; 17      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S8                                                                                                                                ; 17      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Equal1~6                                                                                                        ; 17      ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state.SEND_BITS                                                                                                                          ; 17      ;
@@ -777,17 +775,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_30_result_int[9]~14        ; 15      ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_30_result_int[9]~14        ; 15      ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~14                                                                                                                   ; 14      ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[2]~0                                                                                                              ; 13      ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[18]~0                                                                                                             ; 13      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|index_resive[1]                                                                                                                         ; 13      ;
 ; LCD_Control:CtrlLcdRx|Control:U0|sleep                                                                                                                                       ; 13      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.IDLE                                                                                                   ; 13      ;
 ; SPI_MISO~input                                                                                                                                                               ; 12      ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|state.wait_for_rx_start                                                                                                                    ; 12      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[0]                                                                                                                                ; 12      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[1]                                                                                                                                ; 12      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[2]                                                                                                                                ; 12      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[3]                                                                                                                                ; 12      ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|state.receive_bits                                                                                                                         ; 12      ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|Equal1~1                                                                                                                                   ; 12      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|DONE                                                                                                                                    ; 12      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[4]                                                                                                                                ; 11      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[5]                                                                                                                                ; 11      ;
@@ -797,24 +795,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[11]                                                                                                                               ; 11      ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[7]~2                                                                                                                ; 11      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S0                                                                                                                                ; 11      ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state.WAIT_FOR_REQ                                                                                                                       ; 11      ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|Equal1~1                                                                                                                                 ; 11      ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|state.wait_for_rx_start                                                                                                                    ; 10      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[6]                                                                                                                                ; 10      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|RDATA[10]                                                                                                                               ; 10      ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|index_resive[2]                                                                                                                         ; 10      ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state.WAIT_FOR_REQ                                                                                                                       ; 10      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[28]                                                                                                                        ; 10      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|state.WRITE_LINE2                                                                                               ; 10      ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|state.WRITE_LINE1                                                                                               ; 10      ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[3]~32                                                                                                                   ; 9       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]~3                                                                                                                      ; 9       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|Equal1~2                                                                                                                                   ; 9       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|WideOr2~0                                                                                                                      ; 9       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.SEND_VOLTAGE_CH2_PART2_DUAL                                                                                              ; 9       ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[8]~2                                                                                                        ; 9       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~15                                                                                                                   ; 9       ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[10]~2                                                                                                       ; 9       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[25]                                                                                                                        ; 9       ;
-; ~GND                                                                                                                                                                         ; 8       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[0]~0                                                                                                                        ; 8       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]~1                                                                                                                                ; 8       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|state.wait_half_bit                                                                                                                        ; 8       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[6]~1                                                                                                                                ; 8       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector67~5                                                                                                                   ; 8       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[4]                                                                                                               ; 8       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[5]                                                                                                               ; 8       ;
@@ -825,15 +821,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.SEND_VOLTAGE_CH2_PART1_DUAL                                                                                              ; 8       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_TIME_REQ                                                                                                            ; 8       ;
 ; LCD_Control:CtrlLcdRx|Control:U0|mode_data[0]                                                                                                                                ; 8       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|request_tx                                                                                                                     ; 8       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|Equal1~2                                                                                                                                 ; 8       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]                                                                                                                        ; 8       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_31_result_int[32]~60       ; 8       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[27]                                                                                                                        ; 8       ;
-; rx~input                                                                                                                                                                     ; 7       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[0]~6                                                                                                                           ; 7       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[8]~4                                                                                                                      ; 7       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|state.wait_half_bit                                                                                                                        ; 7       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~25                                                                                                                   ; 7       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]~3                                                                                                                      ; 7       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.SEND_MODE_DUAL                                                                                                           ; 7       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.SEND_MODE_SINGLE                                                                                                         ; 7       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[3]                                                                                                               ; 7       ;
@@ -843,9 +836,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[6]~11                                                                                                                        ; 7       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[0]~10                                                                                                                        ; 7       ;
 ; LCD_Control:CtrlLcdRx|Control:U0|state                                                                                                                                       ; 7       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~12                                                                                                                   ; 7       ;
 ; LCD_Control:CtrlLcdRx|Control:U0|mode_data[1]                                                                                                                                ; 7       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state~13                                                                                                     ; 7       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|request_tx                                                                                                                     ; 7       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state.SEND_START_BIT                                                                                                                     ; 7       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.WAIT_HOLD_H                                                                                            ; 7       ;
+; ~GND                                                                                                                                                                         ; 6       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[8]                                                                                                               ; 6       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[9]                                                                                                               ; 6       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[10]                                                                                                              ; 6       ;
@@ -864,7 +861,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S2                                                                                                                                ; 6       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S5                                                                                                                                ; 6       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[20]                                                                                                         ; 6       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state.SEND_START_BIT                                                                                                                     ; 6       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|WideOr9~0                                                                                                       ; 6       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.WAIT_HOLD_L                                                                                            ; 6       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|WideOr8~0                                                                                                       ; 6       ;
@@ -872,7 +868,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_31_result_int[32]~60       ; 6       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[34]                                                                                                                        ; 6       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[24]                                                                                                                        ; 6       ;
+; rx~input                                                                                                                                                                     ; 5       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|Decoder0~0                                                                                                                              ; 5       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[1]~4                                                                                                                      ; 5       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|state.wait_for_stop_bit                                                                                                                    ; 5       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[2]                                                                                                                ; 5       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data2[2]                                                                                                               ; 5       ;
@@ -892,23 +890,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state.SEND_STOP_BIT                                                                                                                      ; 5       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|state.SELECT_LINE2                                                                                              ; 5       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|op_13~26                       ; 5       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[8]                                                                                                                        ; 5       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[29]                                                                                                                        ; 5       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|Decoder0~8                                                                                                                              ; 4       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|bit_counter[0]                                                                                                                             ; 4       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]~8                                                                                                                                ; 4       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[6]~8                                                                                                                                ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|mode_buffer[0]                                                                                                                 ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|mode_buffer[1]                                                                                                                 ; 4       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[1]~0                                                                                                                ; 4       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[0]~0                                                                                                                ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|Selector26~0                                                                                                                            ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|index_send[2]                                                                                                                           ; 4       ;
 ; LCD_Control:CtrlLcdRx|Control:U0|mode_data[0]~0                                                                                                                              ; 4       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Selector45~0                                                                                                    ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_CH2_PART1_DUAL                                                                                         ; 4       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_CH1_PART2_DUAL                                                                                         ; 4       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_CH1_PART1_DUAL                                                                                         ; 4       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_MODE_DUAL                                                                                                      ; 4       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~0                                                                                                                    ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_DONE_CH2_DUAL                                                                                                       ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S6                                                                                                                                ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[2]                                                                                                                           ; 4       ;
@@ -919,23 +912,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.ENABLE_L                                                                                               ; 4       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.ENABLE_H                                                                                               ; 4       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|op_14~2                        ; 4       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[8]                                                                                                                      ; 4       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.WAIT_SETUP_H                                                                                           ; 4       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|bit_counter[0]~6                                                                                                                           ; 3       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Selector43~5                                                                                                    ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|bit_counter[0]~1                                                                                                                           ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~17                                                                                                                                   ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[1]~6                                                                                                                         ; 3       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~12                                                                                                                                   ; 3       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~10                                                                                                                                   ; 3       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|bit_counter[1]                                                                                                                             ; 3       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|bit_counter[2]                                                                                                                             ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|Selector15~0                                                                                                                            ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|Equal1~1                                                                                                                                   ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[7]                                                                                                                        ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[6]                                                                                                                        ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|Equal1~0                                                                                                                                   ; 3       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[5]                                                                                                                        ; 3       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[4]                                                                                                                        ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[3]                                                                                                                        ; 3       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[2]                                                                                                                        ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[1]                                                                                                                        ; 3       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]                                                                                                                        ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|WideOr13                                                                                                                       ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector67~0                                                                                                                   ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.SEND_VOLTAGE_CH1_PART2_DUAL                                                                                              ; 3       ;
@@ -947,23 +936,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Control:CtrlLcdRx|Control:U0|sleep~0                                                                                                                                     ; 3       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Selector39~0                                                                                                    ; 3       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Selector38~1                                                                                                    ; 3       ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[8]~1                                                                                                        ; 3       ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[10]~1                                                                                                       ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_PART1_SINGLE                                                                                           ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_MODE_SINGLE                                                                                                    ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_CH1_PART2_DUAL                                                                                         ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_CH1_PART1_DUAL                                                                                         ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_MODE_DUAL                                                                                                      ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~0                                                                                                                    ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_CH2_PART2_DUAL                                                                                         ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_PART2_SINGLE                                                                                           ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector1~0                                                                                                                    ; 3       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[1]~1                                                                                                                         ; 3       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[3]~4                                                                                                                           ; 3       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~13                                                                                                                                 ; 3       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[1]~0                                                                                                                         ; 3       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[3]~14                                                                                                                   ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[5]~4                                                                                                                           ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~14                                                                                                                                 ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~12                                                                                                                                 ; 3       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~11                                                                                                                   ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S7                                                                                                                                ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S4                                                                                                                                ; 3       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2~2                                                                                                                          ; 3       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2~0                                                                                                                          ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|Equal0~0                                                                                                                                 ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[1]                                                                                                                           ; 3       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|Equal1~1                                                                                                                                 ; 3       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|Equal1~0                                                                                                                                 ; 3       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state.WAIT_SETUP_L                                                                                           ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bfh:auto_generated|op_1~24 ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bfh:auto_generated|op_1~22 ; 3       ;
@@ -982,8 +974,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gfh:auto_generated|op_1~4                       ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gfh:auto_generated|op_1~2                       ; 3       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gfh:auto_generated|op_1~0                       ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[5]                                                                                                                        ; 3       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[0]                                                                                                                        ; 3       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[6]                                                                                                                        ; 3       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[3]                                                                                                                        ; 3       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[1]                                                                                                                        ; 3       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|req_o                                                                                                                                      ; 3       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2~2_wirecell                                                                                                                 ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|StageOut[963]~650                  ; 2       ;
@@ -1324,7 +1317,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|StageOut[247]~186                  ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|StageOut[248]~185                  ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|StageOut[249]~184                  ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~23                                                                                                                                 ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~22                                                                                                                                 ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Mux26~40                                                                                                        ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[7]                                                                                                                             ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|Decoder0~7                                                                                                                              ; 2       ;
@@ -1343,8 +1336,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[9]                                                                                                                                 ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[10]                                                                                                                                ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|rreg[11]                                                                                                                                ; 2       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~20                                                                                                                                   ; 2       ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~12                                                                                                                                   ; 2       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~19                                                                                                                                   ; 2       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~17                                                                                                                                   ; 2       ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|state~14                                                                                                                                   ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|StageOut[283]~451              ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div1|lpm_divide_7jm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_s8f:divider|StageOut[269]~439              ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|StageOut[962]~513                  ; 2       ;
@@ -1366,11 +1360,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[4]                                                                                                                          ; 2       ;
 ; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[1]                                                                                                                          ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector11~0                                                                                                                   ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~7                                                                                                                    ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~10                                                                                                                   ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector12~1                                                                                                                   ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~6                                                                                                                    ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~5                                                                                                                    ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~9                                                                                                                    ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~8                                                                                                                    ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~7                                                                                                                    ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~4                                                                                                                    ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~3                                                                                                                    ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3~2                                                                                                                    ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.SEND_VOLTAGE_CH1_PART1_DUAL                                                                                              ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.SEND_VOLTAGE_PART1_SINGLE                                                                                                ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|MOSI[1]                                                                                                                        ; 2       ;
@@ -1386,16 +1383,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Selector44~0                                                                                                    ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Selector38~2                                                                                                    ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector0~2                                                                                                                    ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_CH2_PART2_DUAL                                                                                         ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|state.WAIT_SEND_VOLTAGE_PART2_SINGLE                                                                                           ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector1~1                                                                                                                    ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~18                                                                                                                                 ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~17                                                                                                                                 ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~15                                                                                                                                 ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[1]~2                                                                                                                         ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|sreg[1]                                                                                                                                 ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[6]~7                                                                                                                         ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|state.S3                                                                                                                                ; 2       ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]~1                                                                                                                      ; 2       ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[51]~1                                                                                                                      ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|timer[26]                                                                                                                        ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|timer[25]                                                                                                                        ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|timer[24]                                                                                                                        ; 2       ;
@@ -1423,7 +1418,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|timer[2]                                                                                                                         ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|timer[1]                                                                                                                         ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|timer[0]                                                                                                                         ; 2       ;
-; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|ptr[3]~0                                                                                                        ; 2       ;
+; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|ptr[1]~0                                                                                                        ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[19]                                                                                                         ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[18]                                                                                                         ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[17]                                                                                                         ; 2       ;
@@ -1444,7 +1439,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[11]                                                                                                         ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[12]                                                                                                         ; 2       ;
 ; LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[13]                                                                                                         ; 2       ;
-; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[3]~11                                                                                                                   ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|Selector12~2                                                                                                                             ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[1]                                                                                                                             ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|SPI_SS_N                                                                                                                                ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|SPI_MOSI                                                                                                                                ; 2       ;
@@ -1723,6 +1718,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_28_result_int[26]~48       ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_28_result_int[25]~46       ; 2       ;
 ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_28_result_int[24]~44       ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_28_result_int[23]~42       ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_28_result_int[22]~40       ; 2       ;
+; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_28_result_int[21]~38       ; 2       ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -1731,37 +1729,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 3,039 / 32,401 ( 9 % ) ;
-; C16 interconnects     ; 7 / 1,326 ( < 1 % )    ;
-; C4 interconnects      ; 1,270 / 21,816 ( 6 % ) ;
-; Direct links          ; 834 / 32,401 ( 3 % )   ;
+; Block interconnects   ; 3,075 / 32,401 ( 9 % ) ;
+; C16 interconnects     ; 3 / 1,326 ( < 1 % )    ;
+; C4 interconnects      ; 1,172 / 21,816 ( 5 % ) ;
+; Direct links          ; 914 / 32,401 ( 3 % )   ;
 ; Global clocks         ; 2 / 10 ( 20 % )        ;
-; Local interconnects   ; 821 / 10,320 ( 8 % )   ;
-; R24 interconnects     ; 11 / 1,289 ( < 1 % )   ;
-; R4 interconnects      ; 1,267 / 28,186 ( 4 % ) ;
+; Local interconnects   ; 791 / 10,320 ( 8 % )   ;
+; R24 interconnects     ; 17 / 1,289 ( 1 % )     ;
+; R4 interconnects      ; 1,266 / 28,186 ( 4 % ) ;
 +-----------------------+------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 13.05) ; Number of LABs  (Total = 188) ;
+; Number of Logic Elements  (Average = 13.14) ; Number of LABs  (Total = 186) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 8                             ;
-; 2                                           ; 5                             ;
+; 1                                           ; 10                            ;
+; 2                                           ; 4                             ;
 ; 3                                           ; 1                             ;
 ; 4                                           ; 2                             ;
-; 5                                           ; 4                             ;
-; 6                                           ; 8                             ;
+; 5                                           ; 3                             ;
+; 6                                           ; 5                             ;
 ; 7                                           ; 5                             ;
 ; 8                                           ; 1                             ;
-; 9                                           ; 4                             ;
-; 10                                          ; 3                             ;
-; 11                                          ; 4                             ;
-; 12                                          ; 9                             ;
-; 13                                          ; 7                             ;
+; 9                                           ; 6                             ;
+; 10                                          ; 2                             ;
+; 11                                          ; 5                             ;
+; 12                                          ; 7                             ;
+; 13                                          ; 5                             ;
 ; 14                                          ; 9                             ;
-; 15                                          ; 10                            ;
+; 15                                          ; 13                            ;
 ; 16                                          ; 108                           ;
 +---------------------------------------------+-------------------------------+
 
@@ -1769,53 +1767,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.56) ; Number of LABs  (Total = 188) ;
+; LAB-wide Signals  (Average = 0.49) ; Number of LABs  (Total = 186) ;
 +------------------------------------+-------------------------------+
 ; 1 Async. clear                     ; 6                             ;
-; 1 Clock                            ; 54                            ;
-; 1 Clock enable                     ; 31                            ;
-; 1 Sync. clear                      ; 8                             ;
-; 1 Sync. load                       ; 5                             ;
-; 2 Clock enables                    ; 2                             ;
+; 1 Clock                            ; 48                            ;
+; 1 Clock enable                     ; 23                            ;
+; 1 Sync. clear                      ; 7                             ;
+; 1 Sync. load                       ; 3                             ;
+; 2 Clock enables                    ; 5                             ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 14.23) ; Number of LABs  (Total = 188) ;
+; Number of Signals Sourced  (Average = 14.32) ; Number of LABs  (Total = 186) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 9                             ;
+; 1                                            ; 12                            ;
 ; 2                                            ; 4                             ;
 ; 3                                            ; 1                             ;
-; 4                                            ; 3                             ;
-; 5                                            ; 2                             ;
-; 6                                            ; 7                             ;
-; 7                                            ; 9                             ;
-; 8                                            ; 2                             ;
+; 4                                            ; 2                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 5                             ;
+; 7                                            ; 6                             ;
+; 8                                            ; 0                             ;
 ; 9                                            ; 6                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 4                             ;
-; 12                                           ; 6                             ;
-; 13                                           ; 7                             ;
-; 14                                           ; 8                             ;
-; 15                                           ; 28                            ;
-; 16                                           ; 53                            ;
-; 17                                           ; 3                             ;
-; 18                                           ; 2                             ;
-; 19                                           ; 3                             ;
-; 20                                           ; 3                             ;
-; 21                                           ; 3                             ;
-; 22                                           ; 5                             ;
-; 23                                           ; 5                             ;
-; 24                                           ; 1                             ;
-; 25                                           ; 5                             ;
+; 10                                           ; 4                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 6                             ;
+; 14                                           ; 6                             ;
+; 15                                           ; 30                            ;
+; 16                                           ; 57                            ;
+; 17                                           ; 0                             ;
+; 18                                           ; 4                             ;
+; 19                                           ; 4                             ;
+; 20                                           ; 4                             ;
+; 21                                           ; 8                             ;
+; 22                                           ; 2                             ;
+; 23                                           ; 1                             ;
+; 24                                           ; 3                             ;
+; 25                                           ; 4                             ;
 ; 26                                           ; 1                             ;
 ; 27                                           ; 1                             ;
 ; 28                                           ; 0                             ;
-; 29                                           ; 1                             ;
-; 30                                           ; 0                             ;
+; 29                                           ; 0                             ;
+; 30                                           ; 1                             ;
 ; 31                                           ; 0                             ;
 ; 32                                           ; 4                             ;
 +----------------------------------------------+-------------------------------+
@@ -1824,71 +1822,69 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 10.41) ; Number of LABs  (Total = 188) ;
+; Number of Signals Sourced Out  (Average = 10.57) ; Number of LABs  (Total = 186) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 0                             ;
-; 1                                                ; 13                            ;
-; 2                                                ; 9                             ;
-; 3                                                ; 7                             ;
-; 4                                                ; 6                             ;
-; 5                                                ; 4                             ;
-; 6                                                ; 10                            ;
-; 7                                                ; 9                             ;
-; 8                                                ; 9                             ;
-; 9                                                ; 5                             ;
+; 1                                                ; 14                            ;
+; 2                                                ; 8                             ;
+; 3                                                ; 6                             ;
+; 4                                                ; 5                             ;
+; 5                                                ; 6                             ;
+; 6                                                ; 8                             ;
+; 7                                                ; 10                            ;
+; 8                                                ; 5                             ;
+; 9                                                ; 8                             ;
 ; 10                                               ; 9                             ;
-; 11                                               ; 9                             ;
-; 12                                               ; 8                             ;
-; 13                                               ; 24                            ;
-; 14                                               ; 12                            ;
-; 15                                               ; 16                            ;
+; 11                                               ; 4                             ;
+; 12                                               ; 15                            ;
+; 13                                               ; 16                            ;
+; 14                                               ; 14                            ;
+; 15                                               ; 19                            ;
 ; 16                                               ; 36                            ;
 ; 17                                               ; 0                             ;
 ; 18                                               ; 0                             ;
 ; 19                                               ; 1                             ;
-; 20                                               ; 0                             ;
-; 21                                               ; 1                             ;
+; 20                                               ; 2                             ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 15.76) ; Number of LABs  (Total = 188) ;
+; Number of Distinct Inputs  (Average = 16.02) ; Number of LABs  (Total = 186) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 6                             ;
-; 2                                            ; 3                             ;
-; 3                                            ; 5                             ;
-; 4                                            ; 7                             ;
-; 5                                            ; 1                             ;
-; 6                                            ; 2                             ;
-; 7                                            ; 8                             ;
-; 8                                            ; 11                            ;
-; 9                                            ; 11                            ;
-; 10                                           ; 7                             ;
-; 11                                           ; 3                             ;
-; 12                                           ; 9                             ;
-; 13                                           ; 6                             ;
-; 14                                           ; 5                             ;
+; 1                                            ; 3                             ;
+; 2                                            ; 5                             ;
+; 3                                            ; 6                             ;
+; 4                                            ; 5                             ;
+; 5                                            ; 5                             ;
+; 6                                            ; 6                             ;
+; 7                                            ; 6                             ;
+; 8                                            ; 4                             ;
+; 9                                            ; 5                             ;
+; 10                                           ; 6                             ;
+; 11                                           ; 6                             ;
+; 12                                           ; 8                             ;
+; 13                                           ; 4                             ;
+; 14                                           ; 11                            ;
 ; 15                                           ; 7                             ;
-; 16                                           ; 13                            ;
-; 17                                           ; 8                             ;
-; 18                                           ; 12                            ;
-; 19                                           ; 6                             ;
-; 20                                           ; 7                             ;
-; 21                                           ; 7                             ;
-; 22                                           ; 1                             ;
-; 23                                           ; 3                             ;
+; 16                                           ; 8                             ;
+; 17                                           ; 14                            ;
+; 18                                           ; 8                             ;
+; 19                                           ; 8                             ;
+; 20                                           ; 10                            ;
+; 21                                           ; 5                             ;
+; 22                                           ; 5                             ;
+; 23                                           ; 4                             ;
 ; 24                                           ; 4                             ;
-; 25                                           ; 2                             ;
-; 26                                           ; 2                             ;
-; 27                                           ; 3                             ;
-; 28                                           ; 11                            ;
-; 29                                           ; 5                             ;
-; 30                                           ; 4                             ;
-; 31                                           ; 8                             ;
-; 32                                           ; 1                             ;
+; 25                                           ; 0                             ;
+; 26                                           ; 5                             ;
+; 27                                           ; 0                             ;
+; 28                                           ; 8                             ;
+; 29                                           ; 11                            ;
+; 30                                           ; 2                             ;
+; 31                                           ; 7                             ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -2022,14 +2018,14 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------------------------------------+-------------------------------------------------------------+-------------------+
 ; Source Register                                     ; Destination Register                                        ; Delay Added in ns ;
 +-----------------------------------------------------+-------------------------------------------------------------+-------------------+
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[1] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[1]                 ; 0.028             ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[0] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]                 ; 0.028             ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[2] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[2]                 ; 0.028             ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[5] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[5]                 ; 0.028             ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[4] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[4]                 ; 0.028             ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[6] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[6]                 ; 0.028             ;
-; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[7] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[7]                 ; 0.028             ;
-; LCD_Control:CtrlLcdRx|Control:U0|state              ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[0] ; 0.024             ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[1] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[1]                 ; 0.021             ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[0] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]                 ; 0.021             ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[5] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[5]                 ; 0.021             ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[4] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[4]                 ; 0.021             ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[3] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[3]                 ; 0.021             ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[6] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[6]                 ; 0.021             ;
+; LCD_Control:CtrlLcdRx|rs232_rx:U2|shift_register[7] ; LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[7]                 ; 0.021             ;
+; LCD_Control:CtrlLcdRx|Control:U0|state              ; ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[0] ; 0.019             ;
 +-----------------------------------------------------+-------------------------------------------------------------+-------------------+
 Note: This table only shows the top 8 path(s) that have the largest delay added for hold.
 
@@ -2070,39 +2066,39 @@ Info (176353): Automatically promoted node RST_N~input (placed in PIN 89 (CLK6, 
         Info (176357): Destination node LCD_Control:CtrlLcdRx|Control:U0|sleep
         Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|index_send[1]
         Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|index_send[0]
-        Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~15
+        Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]~12
         Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~16
-        Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[1]~1
-        Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~19
+        Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~18
+        Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~20
         Info (176357): Destination node ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state~21
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:07
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 4% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 9% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
+    Info (170196): Router estimated peak interconnect usage is 8% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:08
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 2.13 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.33 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file C:/altera/13.1/hl_MiniProject/Oscilloscope/output_files/Oscilloscope.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1064 megabytes
-    Info: Processing ended: Wed May 24 16:42:39 2017
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 1063 megabytes
+    Info: Processing ended: Sun May 28 21:27:01 2017
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +----------------------------+

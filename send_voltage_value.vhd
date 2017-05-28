@@ -24,7 +24,7 @@ end send_voltage_value;
 
 
 architecture behave of send_voltage_value is
-constant SEND_PER_SEC : integer := 6000;
+constant SEND_PER_SEC : integer := 6250;
 signal MAX_COUNTER : integer := 50e6/SEND_PER_SEC;
 
 constant VOLTAGE_REFER : integer := 3300;

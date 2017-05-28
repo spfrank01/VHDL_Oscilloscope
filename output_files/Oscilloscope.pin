@@ -147,13 +147,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 76        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 77        :        :                   :         : 5         :                
 VCCINT                       : 78        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 79        :        :                   :         : 5         :                
-SPI_SCK                      : 80        : output : 2.5 V             :         : 5         : Y              
+SPI_SS_N                     : 80        : output : 2.5 V             :         : 5         : Y              
 VCCIO5                       : 81        : power  :                   : 2.5V    : 5         :                
 GND                          : 82        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 83        :        :                   :         : 5         :                
-SPI_MISO                     : 84        : input  : 2.5 V             :         : 5         : Y              
+SPI_MOSI                     : 84        : output : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
-SPI_MOSI                     : 86        : output : 2.5 V             :         : 5         : Y              
+SPI_MISO                     : 86        : input  : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
 GND+                         : 88        :        :                   :         : 5         :                
 RST_N                        : 89        : input  : 2.5 V             :         : 5         : Y              
@@ -166,7 +166,7 @@ GND                          : 95        : gnd    :                   :         
 MSEL1                        : 96        :        :                   :         : 6         :                
 MSEL2                        : 97        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 98        :        :                   :         : 6         :                
-SPI_SS_N                     : 99        : output : 2.5 V             :         : 6         : Y              
+SPI_SCK                      : 99        : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 100       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : 101       : output : 2.5 V             :         : 6         : N              
 VCCINT                       : 102       : power  :                   : 1.2V    :           :                
