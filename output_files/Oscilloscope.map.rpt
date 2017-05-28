@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Oscilloscope
-Wed May 24 16:42:10 2017
+Sun May 28 19:07:08 2017
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -64,15 +64,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 24 16:42:10 2017      ;
+; Analysis & Synthesis Status        ; Successful - Sun May 28 19:07:08 2017      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Oscilloscope                               ;
 ; Top-level Entity Name              ; VHDL_Oscilloscope                          ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 2,460                                      ;
-;     Total combinational functions  ; 2,430                                      ;
-;     Dedicated logic registers      ; 323                                        ;
-; Total registers                    ; 323                                        ;
+; Total logic elements               ; 2,449                                      ;
+;     Total combinational functions  ; 2,419                                      ;
+;     Dedicated logic registers      ; 319                                        ;
+; Total registers                    ; 319                                        ;
 ; Total pins                         ; 15                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -248,27 +248,27 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2,460     ;
+; Estimated Total logic elements              ; 2,449     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2430      ;
+; Total combinational functions               ; 2419      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 705       ;
-;     -- 3 input functions                    ; 659       ;
+;     -- 4 input functions                    ; 704       ;
+;     -- 3 input functions                    ; 649       ;
 ;     -- <=2 input functions                  ; 1066      ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1654      ;
-;     -- arithmetic mode                      ; 776       ;
+;     -- normal mode                          ; 1647      ;
+;     -- arithmetic mode                      ; 772       ;
 ;                                             ;           ;
-; Total registers                             ; 323       ;
-;     -- Dedicated logic registers            ; 323       ;
+; Total registers                             ; 319       ;
+;     -- Dedicated logic registers            ; 319       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 15        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 323       ;
-; Total fan-out                               ; 7745      ;
+; Maximum fan-out                             ; 319       ;
+; Total fan-out                               ; 7697      ;
 ; Average fan-out                             ; 2.78      ;
 +---------------------------------------------+-----------+
 
@@ -278,16 +278,16 @@ applicable agreement for further details.
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                     ; Library Name ;
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |VHDL_Oscilloscope                                   ; 2430 (1)          ; 323 (0)      ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |VHDL_Oscilloscope                                                                                                                                                                      ; work         ;
-;    |LCD_Control:CtrlLcdRx|                           ; 356 (0)           ; 150 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx                                                                                                                                                ; work         ;
+; |VHDL_Oscilloscope                                   ; 2419 (1)          ; 319 (0)      ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |VHDL_Oscilloscope                                                                                                                                                                      ; work         ;
+;    |LCD_Control:CtrlLcdRx|                           ; 350 (0)           ; 148 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx                                                                                                                                                ; work         ;
 ;       |Control:U0|                                   ; 55 (55)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0                                                                                                                                     ; work         ;
 ;       |lcd16x2_ctrl_demo3:U1|                        ; 244 (59)          ; 81 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1                                                                                                                          ; work         ;
 ;          |lcd16x2_ctrl:DUT|                          ; 185 (185)         ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT                                                                                                         ; work         ;
-;       |rs232_rx:U2|                                  ; 57 (57)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2                                                                                                                                    ; work         ;
-;    |ctrl_spi_tx:CtrlSpiTx|                           ; 2073 (0)          ; 173 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx                                                                                                                                                ; work         ;
+;       |rs232_rx:U2|                                  ; 51 (51)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2                                                                                                                                    ; work         ;
+;    |ctrl_spi_tx:CtrlSpiTx|                           ; 2068 (0)          ; 171 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx                                                                                                                                                ; work         ;
 ;       |SPI_master:SPI|                               ; 71 (71)           ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI                                                                                                                                 ; work         ;
-;       |rs232_tx:rsTX|                                ; 50 (50)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX                                                                                                                                  ; work         ;
-;       |send_voltage_value:Ctrl|                      ; 1952 (163)        ; 94 (94)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl                                                                                                                        ; work         ;
+;       |rs232_tx:rsTX|                                ; 46 (46)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX                                                                                                                                  ; work         ;
+;       |send_voltage_value:Ctrl|                      ; 1951 (162)        ; 94 (94)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl                                                                                                                        ; work         ;
 ;          |lpm_divide:Div0|                           ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0                                                                                                        ; work         ;
 ;             |lpm_divide_jvo:auto_generated|          ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated                                                                          ; work         ;
 ;                |abs_divider_nbg:divider|             ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div0|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                                                  ; work         ;
@@ -493,12 +493,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 323   ;
+; Total registers                              ; 319   ;
 ; Number of registers using Synchronous Clear  ; 70    ;
-; Number of registers using Synchronous Load   ; 25    ;
+; Number of registers using Synchronous Load   ; 23    ;
 ; Number of registers using Asynchronous Clear ; 26    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 176   ;
+; Number of registers using Clock Enable       ; 174   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -520,32 +520,32 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[2]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|count_time[27]          ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[32]                 ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0|count[10]                            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[0]                           ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[53]                 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|ptr[3]   ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|voltage_data[18]        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|count_time[17]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[51]                 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0|count[27]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|data_o[6]                           ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 27 LEs               ; 9 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|line2[27]                 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|ptr[1]   ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|bit_counter[1]                    ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[3]                      ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|shift_reg[5]                      ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|bit_counter[0]                      ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[3]               ;
-; 6:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[8]                 ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|baudrate_counter[0]               ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|baudrate_counter[1]                 ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|Control:U0|mode_data[0]                         ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI|wait_count[0]                    ;
 ; 8:1                ; 6 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[7]           ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[1]           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|data_to_tx[0]           ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[6]   ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[15]  ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[8]   ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|cnt[10]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|Mux26    ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|lcd16x2_ctrl_demo3:U1|lcd16x2_ctrl:DUT|op_state ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state                             ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|state                               ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX|state                             ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|LCD_Control:CtrlLcdRx|rs232_rx:U2|state                               ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector14              ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector12              ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |VHDL_Oscilloscope|ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Selector3               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
@@ -566,7 +566,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value    ; Type                                               ;
 +----------------+----------+----------------------------------------------------+
 ; system_speed   ; 50000000 ; Signed Integer                                     ;
-; baudrate       ; 115200   ; Signed Integer                                     ;
+; baudrate       ; 460800   ; Signed Integer                                     ;
 +----------------+----------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -589,7 +589,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value    ; Type                                                 ;
 +----------------+----------+------------------------------------------------------+
 ; system_speed   ; 50000000 ; Signed Integer                                       ;
-; baudrate       ; 115200   ; Signed Integer                                       ;
+; baudrate       ; 460800   ; Signed Integer                                       ;
 +----------------+----------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -852,7 +852,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -862,7 +862,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 24 16:41:56 2017
+    Info: Processing started: Sun May 28 19:06:55 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Oscilloscope -c Oscilloscope
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file lcd16x2_ctrl.vhd
@@ -907,6 +907,7 @@ Warning (10540): VHDL Signal Declaration warning at ctrl_spi_tx.vhd(70): used ex
 Info (12128): Elaborating entity "SPI_master" for hierarchy "ctrl_spi_tx:CtrlSpiTx|SPI_master:SPI"
 Info (12128): Elaborating entity "rs232_tx" for hierarchy "ctrl_spi_tx:CtrlSpiTx|rs232_tx:rsTX"
 Info (12128): Elaborating entity "send_voltage_value" for hierarchy "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl"
+Warning (10540): VHDL Signal Declaration warning at send_voltage_value.vhd(28): used explicit default value for signal "MAX_COUNTER" because signal was never assigned a value
 Info (278001): Inferred 6 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Mod1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|Div2"
@@ -991,14 +992,14 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "ctrl_spi_tx:CtrlSpiTx|send_voltage_value:Ctrl|lpm_divide:Div2|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|alt_u_div_36f:divider|add_sub_25_result_int[1]~16"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2485 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2477 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 2470 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 640 megabytes
-    Info: Processing ended: Wed May 24 16:42:10 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:11
+    Info (21061): Implemented 2462 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 636 megabytes
+    Info: Processing ended: Sun May 28 19:07:08 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
 
 

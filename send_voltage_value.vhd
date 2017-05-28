@@ -24,8 +24,11 @@ end send_voltage_value;
 
 
 architecture behave of send_voltage_value is
-constant MAX_COUNTER: integer := 1000000;
+constant SEND_PER_SEC : integer := 6000;
+signal MAX_COUNTER : integer := 50e6/SEND_PER_SEC;
+
 constant VOLTAGE_REFER : integer := 3300;
+
    type state_type is (
         WAIT_TIME_REQ,	-- Default state
 		  
@@ -77,10 +80,8 @@ process(CLK) begin
 				START <= '0';
 				mode_buffer <= MODE;  -- update MODE_buffer
 				
-				if count_time > MAX_COUNTER then
-				
+				if count_time > MAX_COUNTER then				
 					count_time <= 0;
-					----------------
 				
 					-- IF Single mode
 					if mode_buffer = "01" or mode_buffer = "10" then

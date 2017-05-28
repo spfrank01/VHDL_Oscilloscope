@@ -40,7 +40,7 @@ architecture behavior of LCD_Control is
 	component rs232_rx is
 		generic(
 			SYSTEM_SPEED : integer := 50e6;
-			BAUDRATE		 : integer := 115200);
+			BAUDRATE		 : integer := 460800);
 		port(	clk_i		: in	std_logic;	-- system clock
 				rst_i		: in	std_logic;	-- synchronous reset, active high
 				req_o		: out	std_logic := '0';		-- Rx req	

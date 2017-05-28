@@ -63,10 +63,10 @@ set_location_assignment PIN_52 -to LCD_RS
 set_location_assignment PIN_53 -to LCD_RW
 set_location_assignment PIN_89 -to RST_N
 set_location_assignment PIN_2 -to rx
-set_location_assignment PIN_84 -to SPI_MISO
-set_location_assignment PIN_86 -to SPI_MOSI
-set_location_assignment PIN_80 -to SPI_SCK
-set_location_assignment PIN_99 -to SPI_SS_N
+set_location_assignment PIN_86 -to SPI_MISO
+set_location_assignment PIN_84 -to SPI_MOSI
+set_location_assignment PIN_99 -to SPI_SCK
+set_location_assignment PIN_80 -to SPI_SS_N
 set_location_assignment PIN_1 -to tx
 set_global_assignment -name VHDL_FILE lcd16x2_ctrl.vhd
 set_global_assignment -name VHDL_FILE LCD_Control.vhd
